@@ -85,6 +85,12 @@
 						"referenceName": "ds_sounce",
 						"type": "DatasetReference"
 					},
+					"logStorageSettings": {
+						"linkedServiceName": {
+							"referenceName": "movefilefolder2folder",
+							"type": "LinkedServiceReference"
+						}
+					},
 					"enableLogging": true,
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
