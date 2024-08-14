@@ -26,6 +26,17 @@
 							"type": "DelimitedTextReadSettings"
 						}
 					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
@@ -36,8 +47,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "DateSold",
-									"type": "date"
+									"name": "Date Sold",
+									"type": "String"
 								}
 							},
 							{
@@ -46,8 +57,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "MedicationName",
-									"type": "varchar"
+									"name": "Med_name",
+									"type": "String"
 								}
 							},
 							{
@@ -56,8 +67,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "MedicationClass",
-									"type": "varchar"
+									"name": "Med_class",
+									"type": "String"
 								}
 							},
 							{
@@ -66,8 +77,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "QuantitySold",
-									"type": "varchar"
+									"name": "Quantity Sold",
+									"type": "String"
 								}
 							},
 							{
@@ -77,15 +88,26 @@
 								},
 								"sink": {
 									"name": "Price",
-									"type": "decimal"
+									"type": "String"
 								}
 							}
-						]
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
 					}
 				},
 				"inputs": [
 					{
-						"referenceName": "OutPatient",
+						"referenceName": "Pharmarcy",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Pharmarcy",
 						"type": "DatasetReference"
 					}
 				]
