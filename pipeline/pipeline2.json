@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "Pharmacy Data Load",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -25,11 +25,6 @@
 						"formatSettings": {
 							"type": "DelimitedTextReadSettings"
 						}
-					},
-					"sink": {
-						"type": "AzureSqlSink",
-						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
 					},
 					"enableStaging": false,
 					"translator": {
@@ -82,8 +77,188 @@
 								},
 								"sink": {
 									"name": "Price",
+									"type": "decimal"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "OutPatient",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Out Patient Data Load",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Visit_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "VisitDate",
+									"type": "date"
+								}
+							},
+							{
+								"source": {
+									"name": "Patient_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PatientID",
+									"type": "int",
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Age",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Age",
+									"type": "int",
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Gender",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Gender",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Diagnosis",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Diagnosis",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Has_Insurance",
+									"type": "String"
+								},
+								"sink": {
+									"name": "HasInsurance",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Postcode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Postcode",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Total_Cost",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TotalCost",
 									"type": "decimal",
-									"scale": 4,
+									"scale": 2,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Registration",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Registration",
+									"type": "int",
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Nursing",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Nursing",
+									"type": "int",
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Laboratory",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Laboratory",
+									"type": "int",
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Consultation",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Consultation",
+									"type": "int",
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Pharmacy",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Pharmacy",
+									"type": "int",
 									"precision": 10
 								}
 							}
@@ -97,7 +272,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "OutPatient",
 						"type": "DatasetReference"
 					}
 				],
