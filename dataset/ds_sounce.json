@@ -1,0 +1,59 @@
+{
+	"name": "ds_sounce",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "movefilefolder2folder",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "tempfolder"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Prop_0",
+				"type": "String"
+			},
+			{
+				"name": "Entry Code",
+				"type": "String"
+			},
+			{
+				"name": "Feedback Date",
+				"type": "String"
+			},
+			{
+				"name": "Patient Age",
+				"type": "String"
+			},
+			{
+				"name": "Staff Rating",
+				"type": "String"
+			},
+			{
+				"name": "Speed Rating",
+				"type": "String"
+			},
+			{
+				"name": "Wait Time (minutes)",
+				"type": "String"
+			},
+			{
+				"name": "Test Type",
+				"type": "String"
+			},
+			{
+				"name": "Review",
+				"type": "String"
+			}
+		]
+	}
+}
