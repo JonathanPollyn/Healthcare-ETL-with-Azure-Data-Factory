@@ -1,0 +1,24 @@
+{
+	"name": "ds_multipleSheetFiles",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "healthcaredest",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"dsTableName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().dsTableName",
+				"type": "Expression"
+			}
+		}
+	}
+}
