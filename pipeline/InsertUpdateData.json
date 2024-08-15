@@ -44,6 +44,60 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Date Sold",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DateSold",
+									"type": "date"
+								}
+							},
+							{
+								"source": {
+									"name": "Med_name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MedicationName",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Med_class",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MedicationClass",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Quantity Sold",
+									"type": "String"
+								},
+								"sink": {
+									"name": "QuantitySold",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Price",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Price",
+									"type": "decimal",
+									"scale": 4,
+									"precision": 10
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
