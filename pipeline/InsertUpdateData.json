@@ -20,6 +20,7 @@
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
+							"wildcardFileName": "Pharmacy Sales Data.csv",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {

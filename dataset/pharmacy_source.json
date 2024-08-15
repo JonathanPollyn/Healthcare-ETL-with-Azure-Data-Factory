@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "tempfolder"
+				"fileName": "Pharmacy Sales Data.csv",
+				"container": "healthcaredata"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
