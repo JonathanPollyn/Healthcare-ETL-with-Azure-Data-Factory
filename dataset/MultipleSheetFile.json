@@ -7,18 +7,7 @@
 		},
 		"parameters": {
 			"dSheetName": {
-				"type": "string",
-				"defaultValue": [
-					{
-						"SheetName": "In-Patients"
-					},
-					{
-						"SheetName": "Pharmacy"
-					},
-					{
-						"SheetName": "Out-Patients"
-					}
-				]
+				"type": "string"
 			}
 		},
 		"annotations": [],
