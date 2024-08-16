@@ -1,0 +1,48 @@
+{
+	"name": "myPharmacyDataFlow",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "pharmacy_source",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "select1"
+				},
+				{
+					"name": "SumByMedicationName"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          {Date Sold} as string,",
+				"          Med_name as string,",
+				"          Med_class as string,",
+				"          {Quantity Sold} as string,",
+				"          Price as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 select(mapColumn(",
+				"          {Date Sold},",
+				"          Med_name,",
+				"          Med_class,",
+				"          Price",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 aggregate(groupBy(Med_name),",
+				"     SumofMedName = count()) ~> SumByMedicationName"
+			]
+		}
+	}
+}
