@@ -1,0 +1,36 @@
+{
+	"name": "Year",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "pharmacy_source",
+						"type": "DatasetReference"
+					},
+					"name": "getTheYearColum"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "DeriveSoldYear"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          {Date Sold} as string,",
+				"          Med_name as string,",
+				"          Med_class as string,",
+				"          {Quantity Sold} as string,",
+				"          Price as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> getTheYearColum",
+				"getTheYearColum derive(SoldYear = right({Date Sold}, 4)) ~> DeriveSoldYear"
+			]
+		}
+	}
+}
