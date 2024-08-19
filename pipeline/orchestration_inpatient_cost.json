@@ -34,6 +34,139 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Facility Id",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FacilityId",
+									"type": "int",
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Facility Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FacilityName",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "APR DRG Code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "APR_DRG_Code",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "APR Severity of Illness Code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "APR_Severity_of_Illness_Code",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "APR DRG Description",
+									"type": "String"
+								},
+								"sink": {
+									"name": "APR_DRG_Description",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "APR Severity of Illness Description",
+									"type": "String"
+								},
+								"sink": {
+									"name": "APR_Severity_of_Illness_Description",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "APR Medical Surgical Code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "APR_Medical_Surgical_Code",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "APR Medical Surgical Description",
+									"type": "String"
+								},
+								"sink": {
+									"name": "APR_Medical_Surgical_Description",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Discharges",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Discharges",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Mean Charge",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Mean_Charge",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Median Charge",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Median_Charge",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Mean Cost",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Mean_Cost",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Median Cost",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Median_Cost",
+									"type": "varchar"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
