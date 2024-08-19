@@ -1,0 +1,88 @@
+{
+	"name": "csvInpatientcost",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adforchestrationstorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"filename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().filename",
+					"type": "Expression"
+				},
+				"container": "healthcaredata"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Year",
+				"type": "String"
+			},
+			{
+				"name": "Facility Id",
+				"type": "String"
+			},
+			{
+				"name": "Facility Name",
+				"type": "String"
+			},
+			{
+				"name": "APR DRG Code",
+				"type": "String"
+			},
+			{
+				"name": "APR Severity of Illness Code",
+				"type": "String"
+			},
+			{
+				"name": "APR DRG Description",
+				"type": "String"
+			},
+			{
+				"name": "APR Severity of Illness Description",
+				"type": "String"
+			},
+			{
+				"name": "APR Medical Surgical Code",
+				"type": "String"
+			},
+			{
+				"name": "APR Medical Surgical Description",
+				"type": "String"
+			},
+			{
+				"name": "Discharges",
+				"type": "String"
+			},
+			{
+				"name": "Mean Charge",
+				"type": "String"
+			},
+			{
+				"name": "Median Charge",
+				"type": "String"
+			},
+			{
+				"name": "Mean Cost",
+				"type": "String"
+			},
+			{
+				"name": "Median Cost",
+				"type": "String"
+			}
+		]
+	}
+}

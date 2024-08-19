@@ -1,0 +1,87 @@
+{
+	"name": "AzureSQLTables",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSQLDatabase",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"tableName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Year",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FacilityId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FacilityName",
+				"type": "varchar"
+			},
+			{
+				"name": "APR_DRG_Code",
+				"type": "varchar"
+			},
+			{
+				"name": "APR_Severity_of_Illness_Code",
+				"type": "varchar"
+			},
+			{
+				"name": "APR_DRG_Description",
+				"type": "varchar"
+			},
+			{
+				"name": "APR_Severity_of_Illness_Description",
+				"type": "varchar"
+			},
+			{
+				"name": "APR_Medical_Surgical_Code",
+				"type": "varchar"
+			},
+			{
+				"name": "APR_Medical_Surgical_Description",
+				"type": "varchar"
+			},
+			{
+				"name": "Discharges",
+				"type": "varchar"
+			},
+			{
+				"name": "Mean_Charge",
+				"type": "varchar"
+			},
+			{
+				"name": "Median_Charge",
+				"type": "varchar"
+			},
+			{
+				"name": "Mean_Cost",
+				"type": "varchar"
+			},
+			{
+				"name": "Median_Cost",
+				"type": "varchar"
+			},
+			{
+				"name": "LoadDt",
+				"type": "date"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().tableName",
+				"type": "Expression"
+			}
+		}
+	}
+}
