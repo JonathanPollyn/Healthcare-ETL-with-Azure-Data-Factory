@@ -176,7 +176,7 @@
 						"referenceName": "csvInpatientcost",
 						"type": "DatasetReference",
 						"parameters": {
-							"filename": "Pharmacy Sales Data.csv"
+							"filename": "Hospital_Inpatient_Cost_Transparency.csv"
 						}
 					}
 				],
@@ -185,7 +185,7 @@
 						"referenceName": "AzureSQLTables",
 						"type": "DatasetReference",
 						"parameters": {
-							"tableName": "Pharmacy"
+							"tableName": "Hospital_Inpatient_cost"
 						}
 					}
 				]
