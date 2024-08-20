@@ -1,0 +1,97 @@
+{
+	"name": "DerivedCol",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Inpatients",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "AzureSqlTable2",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "GetDeveloper"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          Year as short,",
+				"          {Facility Id} as short,",
+				"          {Facility Name} as string,",
+				"          {APR DRG Code} as short,",
+				"          {APR Severity of Illness Code} as short,",
+				"          {APR DRG Description} as string,",
+				"          {APR Severity of Illness Description} as string,",
+				"          {APR Medical Surgical Code} as string,",
+				"          {APR Medical Surgical Description} as string,",
+				"          Discharges as short,",
+				"          {Mean Charge} as double,",
+				"          {Median Charge} as double,",
+				"          {Mean Cost} as double,",
+				"          {Median Cost} as double",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     partitionBy('hash', 1)) ~> source1",
+				"source1 derive(Dev = 'Jonathan') ~> GetDeveloper",
+				"GetDeveloper sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          Year as integer,",
+				"          FacilityId as integer,",
+				"          FacilityName as string,",
+				"          APR_DRG_Code as string,",
+				"          APR_Severity_of_Illness_Code as string,",
+				"          APR_DRG_Description as string,",
+				"          APR_Severity_of_Illness_Description as string,",
+				"          APR_Medical_Surgical_Code as string,",
+				"          APR_Medical_Surgical_Description as string,",
+				"          Discharges as string,",
+				"          Mean_Charge as string,",
+				"          Median_Charge as string,",
+				"          Mean_Cost as string,",
+				"          Median_Cost as string,",
+				"          LoadDt as date",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          Year,",
+				"          FacilityId = {Facility Id},",
+				"          FacilityName = {Facility Name},",
+				"          APR_DRG_Code = {APR DRG Code},",
+				"          APR_Severity_of_Illness_Code = {APR Severity of Illness Code},",
+				"          APR_DRG_Description = {APR DRG Description},",
+				"          APR_Severity_of_Illness_Description = {APR Severity of Illness Description},",
+				"          APR_Medical_Surgical_Code = {APR Medical Surgical Code},",
+				"          APR_Medical_Surgical_Description = {APR Medical Surgical Description},",
+				"          Discharges,",
+				"          Mean_Charge = {Mean Charge},",
+				"          Median_Charge = {Median Charge},",
+				"          Mean_Cost = {Mean Cost},",
+				"          Median_Cost = {Median Cost}",
+				"     )) ~> sink1"
+			]
+		}
+	}
+}
