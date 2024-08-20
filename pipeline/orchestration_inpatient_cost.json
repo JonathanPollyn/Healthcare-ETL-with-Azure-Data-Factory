@@ -5,7 +5,14 @@
 			{
 				"name": "Copy from Blob to Azure SQL",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Backup Copy Activity",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -37,129 +44,51 @@
 						"mappings": [
 							{
 								"source": {
-									"name": ""
+									"name": "Med_name",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "FacilityId",
-									"type": "int",
-									"precision": 10
+									"name": "MedicationName",
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
-									"name": ""
+									"name": "Med_class",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "FacilityName",
-									"type": "varchar"
+									"name": "MedicationClass",
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
-									"name": ""
+									"name": "Quantity Sold",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "APR_DRG_Code",
-									"type": "varchar"
+									"name": "QuantitySold",
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
-									"name": ""
+									"name": "Price",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "APR_Severity_of_Illness_Code",
-									"type": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": ""
-								},
-								"sink": {
-									"name": "APR_DRG_Description",
-									"type": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": ""
-								},
-								"sink": {
-									"name": "APR_Severity_of_Illness_Description",
-									"type": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": ""
-								},
-								"sink": {
-									"name": "APR_Medical_Surgical_Code",
-									"type": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": ""
-								},
-								"sink": {
-									"name": "APR_Medical_Surgical_Description",
-									"type": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": ""
-								},
-								"sink": {
-									"name": "Discharges",
-									"type": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": ""
-								},
-								"sink": {
-									"name": "Mean_Charge",
-									"type": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": ""
-								},
-								"sink": {
-									"name": "Median_Charge",
-									"type": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": ""
-								},
-								"sink": {
-									"name": "Mean_Cost",
-									"type": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": ""
-								},
-								"sink": {
-									"name": "Median_Cost",
-									"type": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": ""
-								},
-								"sink": {
-									"name": "Year",
-									"type": "int",
+									"name": "Price",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 4,
 									"precision": 10
 								}
 							}
@@ -176,7 +105,7 @@
 						"referenceName": "csvInpatientcost",
 						"type": "DatasetReference",
 						"parameters": {
-							"filename": "Hospital_Inpatient_Cost_Transparency.csv"
+							"filename": "Pharmacy Sales Data.csv"
 						}
 					}
 				],
@@ -185,7 +114,68 @@
 						"referenceName": "AzureSQLTables",
 						"type": "DatasetReference",
 						"parameters": {
-							"tableName": "Hospital_Inpatient_cost"
+							"tableName": "Pharmacy_Sales"
+						}
+					}
+				]
+			},
+			{
+				"name": "Backup Copy Activity",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureSQLTables",
+						"type": "DatasetReference",
+						"parameters": {
+							"tableName": "Pharmacy_Sales"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "csvInpatientcost",
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": {
+								"value": "@concat('Pharmacy_Sales-', utcNow(),'.backup')",
+								"type": "Expression"
+							}
 						}
 					}
 				]
