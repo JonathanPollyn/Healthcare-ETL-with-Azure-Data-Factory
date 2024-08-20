@@ -37,8 +37,7 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "Facility Id",
-									"type": "String"
+									"name": ""
 								},
 								"sink": {
 									"name": "FacilityId",
@@ -48,8 +47,7 @@
 							},
 							{
 								"source": {
-									"name": "Facility Name",
-									"type": "String"
+									"name": ""
 								},
 								"sink": {
 									"name": "FacilityName",
@@ -58,8 +56,7 @@
 							},
 							{
 								"source": {
-									"name": "APR DRG Code",
-									"type": "String"
+									"name": ""
 								},
 								"sink": {
 									"name": "APR_DRG_Code",
@@ -68,8 +65,7 @@
 							},
 							{
 								"source": {
-									"name": "APR Severity of Illness Code",
-									"type": "String"
+									"name": ""
 								},
 								"sink": {
 									"name": "APR_Severity_of_Illness_Code",
@@ -78,8 +74,7 @@
 							},
 							{
 								"source": {
-									"name": "APR DRG Description",
-									"type": "String"
+									"name": ""
 								},
 								"sink": {
 									"name": "APR_DRG_Description",
@@ -88,8 +83,7 @@
 							},
 							{
 								"source": {
-									"name": "APR Severity of Illness Description",
-									"type": "String"
+									"name": ""
 								},
 								"sink": {
 									"name": "APR_Severity_of_Illness_Description",
@@ -98,8 +92,7 @@
 							},
 							{
 								"source": {
-									"name": "APR Medical Surgical Code",
-									"type": "String"
+									"name": ""
 								},
 								"sink": {
 									"name": "APR_Medical_Surgical_Code",
@@ -108,8 +101,7 @@
 							},
 							{
 								"source": {
-									"name": "APR Medical Surgical Description",
-									"type": "String"
+									"name": ""
 								},
 								"sink": {
 									"name": "APR_Medical_Surgical_Description",
@@ -118,8 +110,7 @@
 							},
 							{
 								"source": {
-									"name": "Discharges",
-									"type": "String"
+									"name": ""
 								},
 								"sink": {
 									"name": "Discharges",
@@ -128,8 +119,7 @@
 							},
 							{
 								"source": {
-									"name": "Mean Charge",
-									"type": "String"
+									"name": ""
 								},
 								"sink": {
 									"name": "Mean_Charge",
@@ -138,8 +128,7 @@
 							},
 							{
 								"source": {
-									"name": "Median Charge",
-									"type": "String"
+									"name": ""
 								},
 								"sink": {
 									"name": "Median_Charge",
@@ -148,8 +137,7 @@
 							},
 							{
 								"source": {
-									"name": "Mean Cost",
-									"type": "String"
+									"name": ""
 								},
 								"sink": {
 									"name": "Mean_Cost",
@@ -158,12 +146,21 @@
 							},
 							{
 								"source": {
-									"name": "Median Cost",
-									"type": "String"
+									"name": ""
 								},
 								"sink": {
 									"name": "Median_Cost",
 									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": ""
+								},
+								"sink": {
+									"name": "Year",
+									"type": "int",
+									"precision": 10
 								}
 							}
 						],
@@ -179,7 +176,7 @@
 						"referenceName": "csvInpatientcost",
 						"type": "DatasetReference",
 						"parameters": {
-							"filename": "Hospital_Inpatient_Cost_Transparency.csv"
+							"filename": "Pharmacy Sales Data.csv"
 						}
 					}
 				],
@@ -188,7 +185,7 @@
 						"referenceName": "AzureSQLTables",
 						"type": "DatasetReference",
 						"parameters": {
-							"tableName": "Hospital_Inpatient_cost"
+							"tableName": "Pharmacy"
 						}
 					}
 				]
