@@ -1,0 +1,76 @@
+{
+	"name": "OutPatient",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "healthcaresource",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Hospital Outpatient Data.csv",
+				"container": "healthcaredata"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Visit_Date",
+				"type": "String"
+			},
+			{
+				"name": "Patient_ID",
+				"type": "String"
+			},
+			{
+				"name": "Age",
+				"type": "String"
+			},
+			{
+				"name": "Gender",
+				"type": "String"
+			},
+			{
+				"name": "Diagnosis",
+				"type": "String"
+			},
+			{
+				"name": "Has_Insurance",
+				"type": "String"
+			},
+			{
+				"name": "Postcode",
+				"type": "String"
+			},
+			{
+				"name": "Total_Cost",
+				"type": "String"
+			},
+			{
+				"name": "Registration",
+				"type": "String"
+			},
+			{
+				"name": "Nursing",
+				"type": "String"
+			},
+			{
+				"name": "Laboratory",
+				"type": "String"
+			},
+			{
+				"name": "Consultation",
+				"type": "String"
+			},
+			{
+				"name": "Pharmacy",
+				"type": "String"
+			}
+		]
+	}
+}

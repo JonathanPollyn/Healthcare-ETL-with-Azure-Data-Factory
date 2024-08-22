@@ -1,0 +1,35 @@
+{
+	"name": "SSIS_AZURE_EXECUTION",
+	"properties": {
+		"description": "The activity is used to run SSIS packages that is on Premise ",
+		"activities": [
+			{
+				"name": "Execute SSIS Generic Package",
+				"description": "The activity is used to run SSIS generic packages that is on Premise ",
+				"type": "ExecuteSSISPackage",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"packageLocation": {
+						"packagePath": "SSIS_Azure_Healthcare/Healthcare_ETL/load_generic_medication.dtsx",
+						"type": "SSISDB"
+					},
+					"environmentPath": null,
+					"connectVia": {
+						"referenceName": "SSIS-IR-OPEN",
+						"type": "IntegrationRuntimeReference"
+					},
+					"loggingLevel": "Basic"
+				}
+			}
+		],
+		"annotations": []
+	}
+}

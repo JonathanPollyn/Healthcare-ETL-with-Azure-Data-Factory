@@ -1,0 +1,44 @@
+{
+	"name": "pharmacy_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "movefilefolder2folder",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Pharmacy Sales Data.csv",
+				"container": "healthcaredata"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Date Sold",
+				"type": "String"
+			},
+			{
+				"name": "Med_name",
+				"type": "String"
+			},
+			{
+				"name": "Med_class",
+				"type": "String"
+			},
+			{
+				"name": "Quantity Sold",
+				"type": "String"
+			},
+			{
+				"name": "Price",
+				"type": "String"
+			}
+		]
+	}
+}

@@ -1,0 +1,48 @@
+{
+	"name": "pharmacy_dest",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "healthcaredest",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DateSold",
+				"type": "date"
+			},
+			{
+				"name": "MedicationName",
+				"type": "varchar"
+			},
+			{
+				"name": "MedicationClass",
+				"type": "varchar"
+			},
+			{
+				"name": "QuantitySold",
+				"type": "varchar"
+			},
+			{
+				"name": "Price",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 4
+			},
+			{
+				"name": "LoadDt",
+				"type": "date"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Pharmacy_Sales"
+		}
+	}
+}

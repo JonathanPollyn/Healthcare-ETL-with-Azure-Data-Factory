@@ -1,0 +1,88 @@
+{
+	"name": "pl_orchestration_JP1",
+	"properties": {
+		"activities": [
+			{
+				"name": "CsvDataFolder  Metadata",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "CsvDataFolder",
+						"type": "DatasetReference"
+					},
+					"fieldList": [
+						"itemName",
+						"lastModified"
+					],
+					"storeSettings": {
+						"type": "AzureBlobStorageReadSettings",
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
+				}
+			},
+			{
+				"name": "Insert Metadata",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "CsvDataFolder  Metadata",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[InsertFileMetadata]",
+					"storedProcedureParameters": {
+						"FileName": {
+							"value": {
+								"value": "@activity('CsvDataFolder  Metadata')",
+								"type": "Expression"
+							},
+							"type": "String"
+						},
+						"ModifiedAt": {
+							"value": {
+								"value": "@convertFromUtc(activity('CsvDataFolder  Metadata').output.lastModified, 'Pacific Standard Time')",
+								"type": "Expression"
+							},
+							"type": "DateTime"
+						},
+						"UpdatedAt": {
+							"value": {
+								"value": "@convertFromUtc(utcNow(),'Pacific Standard Time' )",
+								"type": "Expression"
+							},
+							"type": "DateTime"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSQLDatabase",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": []
+	}
+}

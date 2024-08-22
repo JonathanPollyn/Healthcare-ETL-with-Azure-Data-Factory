@@ -1,0 +1,124 @@
+{
+	"name": "InsertUpdateData",
+	"properties": {
+		"activities": [
+			{
+				"name": "Get Source Data",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"wildcardFileName": "Pharmacy Sales Data.csv",
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "upsert",
+						"upsertSettings": {
+							"useTempDB": true,
+							"keys": [
+								"DateSold",
+								"MedicationName",
+								"MedicationClass"
+							]
+						},
+						"sqlWriterUseTableLock": false,
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Date Sold",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DateSold",
+									"type": "date"
+								}
+							},
+							{
+								"source": {
+									"name": "Med_name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MedicationName",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Med_class",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MedicationClass",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Quantity Sold",
+									"type": "String"
+								},
+								"sink": {
+									"name": "QuantitySold",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Price",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Price",
+									"type": "decimal",
+									"scale": 4,
+									"precision": 10
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "pharmacy_source",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "pharmacy_dest",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

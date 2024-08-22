@@ -1,0 +1,87 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "healthcaredest",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "VisitDate",
+				"type": "date"
+			},
+			{
+				"name": "PatientID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Age",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Gender",
+				"type": "varchar"
+			},
+			{
+				"name": "Diagnosis",
+				"type": "varchar"
+			},
+			{
+				"name": "HasInsurance",
+				"type": "varchar"
+			},
+			{
+				"name": "Postcode",
+				"type": "varchar"
+			},
+			{
+				"name": "TotalCost",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 2
+			},
+			{
+				"name": "Registration",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Nursing",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Laboratory",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Consultation",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Pharmacy",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LoadDt",
+				"type": "date"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Hospital_Outpatient"
+		}
+	}
+}

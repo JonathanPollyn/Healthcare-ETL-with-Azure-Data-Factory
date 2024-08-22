@@ -1,0 +1,29 @@
+{
+	"name": "MultipleSheetFile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "healthcaresource",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"dSheetName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": {
+				"value": "@dataset().dSheetName",
+				"type": "Expression"
+			},
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "MultipleSheetFile.xlsx",
+				"container": "healthcaredata"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": []
+	}
+}

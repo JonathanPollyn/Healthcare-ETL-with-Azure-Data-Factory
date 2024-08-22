@@ -1,0 +1,9 @@
+{
+	"name": "heathcare-adf",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e34e6dde-3296-4f23-934c-903d8cfb0d5b",
+		"tenantId": "c052810b-bee0-44a2-af31-d0311173a31b"
+	}
+}

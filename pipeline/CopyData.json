@@ -1,0 +1,497 @@
+{
+	"name": "CopyData",
+	"properties": {
+		"activities": [
+			{
+				"name": "Pharmacy Data Load",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Date Sold",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Date Sold",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Med_name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Med_name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Med_class",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Med_class",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Quantity Sold",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Quantity Sold",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Price",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Price",
+									"type": "String"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Pharmarcy",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Pharmarcy",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Out-Patient Data Load",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Visit_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "VisitDate",
+									"type": "date"
+								}
+							},
+							{
+								"source": {
+									"name": "Patient_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PatientID",
+									"type": "int",
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Age",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Age",
+									"type": "int",
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Gender",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Gender",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Diagnosis",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Diagnosis",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Has_Insurance",
+									"type": "String"
+								},
+								"sink": {
+									"name": "HasInsurance",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Postcode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Postcode",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Total_Cost",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TotalCost",
+									"type": "decimal",
+									"scale": 2,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Registration",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Registration",
+									"type": "int",
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Nursing",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Nursing",
+									"type": "int",
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Laboratory",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Laboratory",
+									"type": "int",
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Consultation",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Consultation",
+									"type": "int",
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Pharmacy",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Pharmacy",
+									"type": "int",
+									"precision": 10
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "OutPatient",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "In-Patient Data Load",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Year",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Year",
+									"type": "int",
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Facility Id",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FacilityId",
+									"type": "int",
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Facility Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FacilityName",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "APR DRG Code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "APR_DRG_Code",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "APR Severity of Illness Code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "APR_Severity_of_Illness_Code",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "APR DRG Description",
+									"type": "String"
+								},
+								"sink": {
+									"name": "APR_DRG_Description",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "APR Severity of Illness Description",
+									"type": "String"
+								},
+								"sink": {
+									"name": "APR_Severity_of_Illness_Description",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "APR Medical Surgical Code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "APR_Medical_Surgical_Code",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "APR Medical Surgical Description",
+									"type": "String"
+								},
+								"sink": {
+									"name": "APR_Medical_Surgical_Description",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Discharges",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Discharges",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Mean Charge",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Mean_Charge",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Mean Cost",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Mean_Cost",
+									"type": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Median Cost",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Median_Cost",
+									"type": "varchar"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Inpatients",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTable2",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
