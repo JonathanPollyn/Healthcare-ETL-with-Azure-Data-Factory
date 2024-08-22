@@ -1,0 +1,1001 @@
+ID,	Medication
+1,	Acetaminophen Tablet (500 mg) - Analgesic
+2,	Ibuprofen Tablet (200 mg) - Nonsteroidal Anti-Inflammatory Drug
+3,	Aspirin Tablet (81 mg) - Platelet Aggregation Inhibitor
+4,	Naproxen Tablet (250 mg) - Nonsteroidal Anti-Inflammatory Drug
+5,	Morphine Tablet (15 mg) - Opioid Analgesic
+6,	Oxycodone Tablet (5 mg) - Opioid Analgesic
+7,	Codeine Tablet (30 mg) - Opioid Analgesic
+8,	Hydrocodone/Acetaminophen Tablet (5/325 mg) - Opioid Analgesic/Analgesic Combination
+9,	Tramadol Tablet (50 mg) - Opioid Analgesic
+10,	Methadone Tablet (10 mg) - Opioid Analgesic
+11,	Buprenorphine/Naloxone Tablet (8/2 mg) - Opioid Analgesic/Opioid Antagonist Combination
+12,	Gabapentin Capsule (300 mg) - Anticonvulsant
+13,	Pregabalin Capsule (75 mg) - Anticonvulsant
+14,	Amitriptyline Tablet (25 mg) - Tricyclic Antidepressant
+15,	Fluoxetine Capsule (20 mg) - Selective Serotonin Reuptake Inhibitor
+16,	Sertraline Tablet (50 mg) - Selective Serotonin Reuptake Inhibitor
+17,	Escitalopram Tablet (10 mg) - Selective Serotonin Reuptake Inhibitor
+18,	Venlafaxine Capsule (75 mg) - Serotonin-Norepinephrine Reuptake Inhibitor
+19,	Duloxetine Capsule (30 mg) - Serotonin-Norepinephrine Reuptake Inhibitor
+20,	Bupropion Tablet (150 mg) - Atypical Antidepressant
+21,	Mirtazapine Tablet (15 mg) - Atypical Antidepressant
+22,	Trazodone Tablet (50 mg) - Atypical Antidepressant
+23,	Lorazepam Tablet (1 mg) - Benzodiazepine
+24,	Alprazolam Tablet (0.25 mg) - Benzodiazepine
+25,	Diazepam Tablet (5 mg) - Benzodiazepine
+26,	Clonazepam Tablet (0.5 mg) - Benzodiazepine
+27,	Zolpidem Tablet (10 mg) - Sedative-Hypnotic
+28,	Eszopiclone Tablet (2 mg) - Sedative-Hypnotic
+29,	Ramelteon Tablet (8 mg) - Melatonin Receptor Agonist
+30,	Methylphenidate Tablet (10 mg) - Central Nervous System Stimulant
+31,	Amphetamine/Dextroamphetamine Tablet (10/10 mg) - Central Nervous System Stimulant
+32,	Atomoxetine Capsule (18 mg) - Norepinephrine Reuptake Inhibitor
+33,	Lisdexamfetamine Capsule (30 mg) - Central Nervous System Stimulant
+34,	Guanfacine Tablet (1 mg) - Alpha-2 Agonist
+35,	Clonidine Tablet (0.2 mg) - Alpha-2 Agonist
+36,	Risperidone Tablet (1 mg) - Atypical Antipsychotic
+37,	Aripiprazole Tablet (5 mg) - Atypical Antipsychotic
+38,	Olanzapine Tablet (10 mg) - Atypical Antipsychotic
+39,	Quetiapine Tablet (25 mg) - Atypical Antipsychotic
+40,	Haloperidol Tablet (5 mg) - Typical Antipsychotic
+41,	Lithium Carbonate Capsule (300 mg) - Mood Stabilizer
+42,	Valproic Acid Capsule (250 mg) - Anticonvulsant/Mood Stabilizer
+43,	Lamotrigine Tablet (50 mg) - Anticonvulsant
+44,	Gabapentin Capsule (300 mg) - Anticonvulsant
+45,	Pregabalin Capsule (75 mg) - Anticonvulsant
+46,	Hydrochlorothiazide Tablet (12.5 mg) - Diuretic
+47,	Furosemide Tablet (40 mg) - Loop Diuretic
+48,	Spironolactone Tablet (25 mg) - Potassium-Sparing Diuretic
+49,	Metolazone Tablet (2.5 mg) - Thiazide Diuretic
+50,	Atenolol Tablet (50 mg) - Beta-Blocker
+51,	Metoprolol Tablet (25 mg) - Beta-Blocker
+52,	Propranolol Tablet (40 mg) - Beta-Blocker
+53,	Carvedilol Tablet (6.25 mg) - Beta-Blocker
+54,	Labetalol Tablet (100 mg) - Beta-Blocker
+55,	Enalapril Tablet (10 mg) - ACE Inhibitor
+56,	Lisinopril Tablet (20 mg) - ACE Inhibitor
+57,	Captopril Tablet (25 mg) - ACE Inhibitor
+58,	Losartan Tablet (50 mg) - Angiotensin II Receptor Blocker
+59,	Valsartan Tablet (80 mg) - Angiotensin II Receptor Blocker
+60,	Irbesartan Tablet (150 mg) - Angiotensin II Receptor Blocker
+61,	Telmisartan Tablet (40 mg) - Angiotensin II Receptor Blocker
+62,	Ramipril Capsule (5 mg) - ACE Inhibitor
+63,	Amlodipine Tablet (5 mg) - Calcium Channel Blocker
+64,	Nifedipine Tablet (10 mg) - Calcium Channel Blocker
+65,	Verapamil Tablet (120 mg) - Calcium Channel Blocker
+66,	Diltiazem Tablet (60 mg) - Calcium Channel Blocker
+67,	Isosorbide Dinitrate Tablet (10 mg) - Vasodilator
+68,	Nitroglycerin Tablet (0.4 mg) - Vasodilator
+69,	Digoxin Tablet (0.125 mg) - Cardiac Glycoside
+70,	Furosemide Tablet (40 mg) - Loop Diuretic
+71,	Torsemide Tablet (20 mg) - Loop Diuretic
+72,	Hydrochlorothiazide/Amiloride Tablet (25/5 mg) - Diuretic/Thiazide Diuretic Combination
+73,	Triamterene/Hydrochlorothiazide Capsule (37.5/25 mg) - Diuretic/Thiazide Diuretic Combination
+74,	Lisinopril/Hydrochlorothiazide Tablet (20/12.5 mg) - ACE Inhibitor/Thiazide Diuretic Combination
+75,	Valsartan/Hydrochlorothiazide Tablet (160/12.5 mg) - Angiotensin II Receptor Blocker/Thiazide Diuretic Combination
+76,	Metoprolol/Hydrochlorothiazide Tablet (50/25 mg) - Beta-Blocker/Thiazide Diuretic Combination
+77,	Enalapril/Hydrochlorothiazide Tablet (20/12.5 mg) - ACE Inhibitor/Thiazide Diuretic Combination
+78,	Atenolol/Chlorthalidone Tablet (50/25 mg) - Beta-Blocker/Thiazide Diuretic Combination
+79,	Losartan/Hydrochlorothiazide Tablet (50/12.5 mg) - Angiotensin II Receptor Blocker/Thiazide Diuretic Combination
+80,	Irbesartan/Hydrochlorothiazide Tablet (150/12.5 mg) - Angiotensin II Receptor Blocker/Thiazide Diuretic Combination
+81,	Carvedilol/Clonidine Tablet (25/0.1 mg) - Beta-Blocker/Alpha-2 Agonist Combination
+82,	Propranolol/Hydrochlorothiazide Capsule (40/25 mg) - Beta-Blocker/Thiazide Diuretic Combination
+83,	Atenolol/Chlorthalidone Tablet (50/25 mg) - Beta-Blocker/Thiazide Diuretic Combination
+84,	Nebivolol Tablet (5 mg) - Beta-Blocker
+85,	Labetalol Tablet (200 mg) - Beta-Blocker/Alpha-Blocker Combination
+86,	Enalapril Tablet (20 mg) - ACE Inhibitor
+87,	Lisinopril Tablet (40 mg) - ACE Inhibitor
+88,	Captopril Tablet (50 mg) - ACE Inhibitor
+89,	Benazepril Tablet (20 mg) - ACE Inhibitor
+90,	Ramipril Capsule (10 mg) - ACE Inhibitor
+91,	Quinapril Tablet (20 mg) - ACE Inhibitor
+92,	Spironolactone Tablet (50 mg) - Potassium-Sparing Diuretic
+93,	Eplerenone Tablet (25 mg) - Potassium-Sparing Diuretic
+94,	Triamterene Capsule (50 mg) - Potassium-Sparing Diuretic
+95,	Guanfacine Tablet (2 mg) - Alpha-2 Agonist
+96,	Clonidine Tablet (0.3 mg) - Alpha-2 Agonist
+97,	Tamsulosin Capsule (0.4 mg) - Alpha-Blocker
+98,	Terazosin Capsule (2 mg) - Alpha-Blocker
+99,	Finasteride Tablet (5 mg) - 5-Alpha Reductase Inhibitor
+100,	Doxazosin Tablet (4 mg) - Alpha-Blocker
+101,	Albuterol Inhaler (90 mcg/actuation) - Short-Acting Beta-2 Agonist
+102,	Levalbuterol Inhaler (45 mcg/actuation) - Short-Acting Beta-2 Agonist
+103,	Salmeterol Inhaler (50 mcg/actuation) - Long-Acting Beta-2 Agonist
+104,	Formoterol Inhaler (12 mcg/actuation) - Long-Acting Beta-2 Agonist
+105,	Ipratropium Inhaler (20 mcg/actuation) - Anticholinergic
+106,	Tiotropium Inhaler (18 mcg/actuation) - Anticholinergic
+107,	Budesonide Inhaler (80 mcg/actuation) - Inhaled Corticosteroid
+108,	Beclomethasone Inhaler (100 mcg/actuation) - Inhaled Corticosteroid
+109,	Fluticasone/Salmeterol Inhaler (100/50 mcg/actuation) - Inhaled Corticosteroid/Long-Acting Beta-2 Agonist Combination
+110,	Budesonide/Formoterol Inhaler (160/4.5 mcg/actuation) - Inhaled Corticosteroid/Long-Acting Beta-2 Agonist Combination
+111,	Fluticasone Inhaler (50 mcg/actuation) - Inhaled Corticosteroid
+112,	Mometasone Inhaler (110 mcg/actuation) - Inhaled Corticosteroid
+113,	Montelukast Tablet (10 mg) - Leukotriene Receptor Antagonist
+114,	Zafirlukast Tablet (20 mg) - Leukotriene Receptor Antagonist
+115,	Ipratropium/Albuterol Inhaler (18/90 mcg/actuation) - Anticholinergic/Short-Acting Beta-2 Agonist Combination
+116,	Fluticasone Inhaler (250 mcg/actuation) - Inhaled Corticosteroid
+117,	Triamcinolone Inhaler (55 mcg/actuation) - Inhaled Corticosteroid
+118,	Hydroxyzine Tablet (25 mg) - Antihistamine
+119,	Loratadine Tablet (10 mg) - Antihistamine
+120,	Cetirizine Tablet (10 mg) - Antihistamine
+121,	Fexofenadine Tablet (180 mg) - Antihistamine
+122,	Diphenhydramine Capsule (25 mg) - Antihistamine
+123,	Fluticasone Nasal Spray (50 mcg/spray) - Intranasal Corticosteroid
+124,	Mometasone Nasal Spray (50 mcg/spray) - Intranasal Corticosteroid
+125,	Beclomethasone Nasal Spray (42 mcg/spray) - Intranasal Corticosteroid
+126,	Olopatadine Nasal Spray (665 mcg/spray) - Intranasal Antihistamine
+127,	Azelastine Nasal Spray (137 mcg/spray) - Intranasal Antihistamine
+128,	Montelukast Tablet (5 mg) - Leukotriene Receptor Antagonist
+129,	Zafirlukast Tablet (10 mg) - Leukotriene Receptor Antagonist
+130,	Salicylic Acid Topical Cream (2%) - Keratolytic
+131,	Benzoyl Peroxide Topical Gel (5%) - Acne Treatment
+132,	Clindamycin Topical Lotion (1%) - Antibiotic
+133,	Tretinoin Topical Cream (0.025%) - Retinoid
+134,	Adapalene Topical Gel (0.1%) - Retinoid
+135,	Hydrocortisone Topical Cream (1%) - Corticosteroid
+136,	Mupirocin Topical Ointment (2%) - Antibiotic
+137,	Ketoconazole Topical Cream (2%) - Antifungal
+138,	Fluconazole Topical Gel (0.5%) - Antifungal
+139,	Tretinoin Topical Cream (0.05%) - Retinoid
+140,	Adapalene/Benzoyl Peroxide Topical Gel (0.1/2.5%) - Retinoid/Acne Treatment Combination
+141,	Clindamycin/Benzoyl Peroxide Topical Gel (1/5%) - Antibiotic/Acne Treatment Combination
+142,	Erythromycin/Benzoyl Peroxide Topical Gel (3/5%) - Antibiotic/Acne Treatment Combination
+143,	Hydroquinone Topical Cream (4%) - Skin Lightening Agent
+144,	Benzoyl Peroxide/Clindamycin Topical Gel (2.5/1%) - Acne Treatment/Antibiotic Combination
+145,	Tretinoin/Clindamycin Topical Gel (0.025/1%) - Retinoid/Antibiotic Combination
+146,	Mupirocin Topical Ointment (2%) - Antibiotic
+147,	Ketoconazole Topical Cream (2%) - Antifungal
+148,	Fluconazole Topical Gel (0.5%) - Antifungal
+149,	Nystatin Cream (100,000 units/g) - Antifungal
+150,	Clotrimazole Topical Cream (1%) - Antifungal
+151,	Fluocinonide Topical Ointment (0.05%) - High-Potency Corticosteroid
+152,	Triamcinolone Topical Ointment (0.1%) - Corticosteroid
+153,	Hydrocortisone Topical Cream (2.5%) - Low-Potency Corticosteroid
+154,	Desonide Topical Cream (0.05%) - Low-Potency Corticosteroid
+155,	Halobetasol Topical Ointment (0.05%) - High-Potency Corticosteroid
+156,	Clobetasol Topical Cream (0.05%) - High-Potency Corticosteroid
+157,	Betamethasone Topical Cream (0.05%) - High-Potency Corticosteroid
+158,	Desoximetasone Topical Cream (0.25%) - Mid-Potency Corticosteroid
+159,	Hydrocortisone Topical Cream (1%) - Low-Potency Corticosteroid
+160,	Fluticasone Topical Cream (0.05%) - Mid-Potency Corticosteroid
+161,	Acyclovir Topical Cream (5%) - Antiviral
+162,	Clotrimazole-Betamethasone Topical Cream (1/0.05%) - Antifungal/Corticosteroid Combination
+163,	Tretinoin Topical Cream (0.1%) - Retinoid
+164,	Adapalene/Benzoyl Peroxide Topical Gel (0.3/2.5%) - Retinoid/Acne Treatment Combination
+165,	Nifedipine Topical Ointment (0.2%) - Calcium Channel Blocker
+166,	Nitroglycerin Topical Ointment (2%) - Vasodilator
+167,	Isosorbide Mononitrate Tablet (30 mg) - Vasodilator
+168,	Hydralazine Tablet (10 mg) - Vasodilator
+169,	Diltiazem Topical Cream (2%) - Calcium Channel Blocker
+170,	Terbinafine Cream (1%) - Antifungal
+171,	Clindamycin Phosphate Topical Lotion (1%) - Antibiotic
+172,	Metronidazole Topical Gel (0.75%) - Antibiotic
+173,	Permethrin Topical Cream (5%) - Scabicide/Pediculicide
+174,	Ketoconazole Topical Cream (2%) - Antifungal
+175,	Nystatin/Triamcinolone Topical Cream (100,000 units/g - 0.1%) - Antifungal/Corticosteroid Combination
+176,	Clobetasol Topical Cream (0.05%) - High-Potency Corticosteroid
+177,	Betamethasone Topical Cream (0.05%) - High-Potency Corticosteroid
+178,	Hydrocortisone Valerate Topical Cream (0.2%) - Low-Potency Corticosteroid
+179,	Desonide Topical Cream (0.05%) - Low-Potency Corticosteroid
+180,	Triamcinolone Topical Ointment (0.1%) - Corticosteroid
+181,	Fluocinolone Topical Oil (0.01%) - Low-Potency Corticosteroid
+182,	Methotrexate Tablet (2.5 mg) - Antimetabolite
+183,	Leflunomide Tablet (10 mg) - Disease-Modifying Antirheumatic Drug
+184,	Hydroxychloroquine Tablet (200 mg) - Disease-Modifying Antirheumatic Drug
+185,	Sulfasalazine Tablet (500 mg) - Disease-Modifying Antirheumatic Drug
+186,	Celecoxib Capsule (200 mg) - Nonsteroidal Anti-Inflammatory Drug
+187,	Meloxicam Tablet (15 mg) - Nonsteroidal Anti-Inflammatory Drug
+188,	Diclofenac Tablet (50 mg) - Nonsteroidal Anti-Inflammatory Drug
+189,	Indomethacin Capsule (25 mg) - Nonsteroidal Anti-Inflammatory Drug
+190,	Prednisone Tablet (5 mg) - Corticosteroid
+191,	Prednisolone Tablet (5 mg) - Corticosteroid
+192,	Methylprednisolone Tablet (4 mg) - Corticosteroid
+193,	Triamcinolone Tablet (4 mg) - Corticosteroid
+194,	Ibuprofen Tablet (200 mg) - Nonsteroidal Anti-Inflammatory Drug
+195,	Naproxen Tablet (250 mg) - Nonsteroidal Anti-Inflammatory Drug
+196,	Fenoprofen Tablet (600 mg) - Nonsteroidal Anti-Inflammatory Drug
+197,	Piroxicam Capsule (20 mg) - Nonsteroidal Anti-Inflammatory Drug
+198,	Etodolac Tablet (400 mg) - Nonsteroidal Anti-Inflammatory Drug
+199,	Ketorolac Tablet (10 mg) - Nonsteroidal Anti-Inflammatory Drug
+200,	Oxaprozin Tablet (600 mg) - Nonsteroidal Anti-Inflammatory Drug
+201,	Nabumetone Tablet (500 mg) - Nonsteroidal Anti-Inflammatory Drug
+202,	Rofecoxib Tablet (25 mg) - Nonsteroidal Anti-Inflammatory Drug
+203,	Etoricoxib Tablet (90 mg) - Nonsteroidal Anti-Inflammatory Drug
+204,	Valdecoxib Tablet (20 mg) - Nonsteroidal Anti-Inflammatory Drug
+205,	Diflunisal Tablet (500 mg) - Nonsteroidal Anti-Inflammatory Drug
+206,	Acetaminophen Tablet (500 mg) - Analgesic
+207,	Acetaminophen Tablet (650 mg) - Analgesic
+208,	Acetaminophen Tablet (325 mg) - Analgesic
+209,	Acetaminophen Tablet (1,000 mg) - Analgesic
+210,	Acetaminophen/Codeine Tablet (300/30 mg) - Analgesic/Opioid Combination
+211,	Oxycodone Tablet (5 mg) - Opioid Analgesic
+212,	Hydrocodone/Acetaminophen Tablet (5/325 mg) - Opioid Analgesic/Analgesic Combination
+213,	Tramadol Tablet (50 mg) - Opioid Analgesic
+214,	Morphine Tablet (15 mg) - Opioid Analgesic
+215,	Fentanyl Patch (25 mcg/h) - Opioid Analgesic
+216,	Buprenorphine/Naloxone Tablet (8/2 mg) - Opioid Analgesic/Opioid Antagonist Combination
+217,	Methadone Tablet (10 mg) - Opioid Analgesic
+218,	Gabapentin Tablet (300 mg) - Anticonvulsant
+219,	Pregabalin Capsule (50 mg) - Anticonvulsant
+220,	Levetiracetam Tablet (500 mg) - Anticonvulsant
+221,	Topiramate Tablet (25 mg) - Anticonvulsant
+222,	Carbamazepine Tablet (200 mg) - Anticonvulsant
+223,	Valproic Acid Capsule (250 mg) - Anticonvulsant
+224,	Lamotrigine Tablet (100 mg) - Anticonvulsant
+225,	Phenytoin Capsule (100 mg) - Anticonvulsant
+226,	Clonazepam Tablet (1 mg) - Anticonvulsant
+227,	Diazepam Tablet (5 mg) - Benzodiazepine
+228,	Alprazolam Tablet (0.25 mg) - Benzodiazepine
+229,	Lorazepam Tablet (1 mg) - Benzodiazepine
+230,	Temazepam Capsule (15 mg) - Benzodiazepine
+231,	Clorazepate Tablet (3.75 mg) - Benzodiazepine
+232,	Oxazepam Capsule (10 mg) - Benzodiazepine
+233,	Buspirone Tablet (5 mg) - Anxiolytic
+234,	Hydroxyzine Tablet (25 mg) - Anxiolytic
+235,	Propranolol Tablet (10 mg) - Beta-Blocker
+236,	Atenolol Tablet (50 mg) - Beta-Blocker
+237,	Metoprolol Tablet (25 mg) - Beta-Blocker
+238,	Timolol Tablet (10 mg) - Beta-Blocker
+239,	Bisoprolol Tablet (5 mg) - Beta-Blocker
+240,	Carvedilol Tablet (12.5 mg) - Beta-Blocker
+241,	Nebivolol Tablet (5 mg) - Beta-Blocker
+242,	Clonidine Tablet (0.1 mg) - Alpha-2 Agonist
+243,	Guanfacine Tablet (1 mg) - Alpha-2 Agonist
+244,	Prazosin Capsule (1 mg) - Alpha-Blocker
+245,	Terazosin Capsule (1 mg) - Alpha-Blocker
+246,	Doxazosin Tablet (1 mg) - Alpha-Blocker
+247,	Tamsulosin Capsule (0.4 mg) - Alpha-Blocker
+248,	Dutasteride Capsule (0.5 mg) - 5-Alpha Reductase Inhibitor
+249,	Finasteride Tablet (1 mg) - 5-Alpha Reductase Inhibitor
+250,	Tadalafil Tablet (20 mg) - Phosphodiesterase Type 5 Inhibitor
+251,	Sildenafil Tablet (50 mg) - Phosphodiesterase Type 5 Inhibitor
+252,	Vardenafil Tablet (10 mg) - Phosphodiesterase Type 5 Inhibitor
+253,	Alprostadil Injection (20 mcg/mL) - Prostaglandin E1 Analog
+254,	Alprostadil Urethral Suppository (125 mcg) - Prostaglandin E1 Analog
+255,	Minoxidil Topical Solution (5%) - Vasodilator
+256,	Finasteride Tablet (5 mg) - 5-Alpha Reductase Inhibitor
+257,	Tamsulosin Tablet (0.4 mg) - Alpha-Blocker
+258,	Terazosin Tablet (10 mg) - Alpha-Blocker
+259,	Sildenafil Tablet (25 mg) - Phosphodiesterase Type 5 Inhibitor
+260,	Vardenafil Tablet (20 mg) - Phosphodiesterase Type 5 Inhibitor
+261,	Cialis Tablet (5 mg) - Phosphodiesterase Type 5 Inhibitor
+262,	Sildenafil Tablet (100 mg) - Phosphodiesterase Type 5 Inhibitor
+263,	Vardenafil Tablet (5 mg) - Phosphodiesterase Type 5 Inhibitor
+264,	Alprostadil Urethral Suppository (250 mcg) - Prostaglandin E1 Analog
+265,	Phentolamine Injection (1 mg/mL) - Alpha-Blocker
+266,	Papaverine Injection (30 mg/mL) - Vasodilator
+267,	Yohimbine Tablet (5.4 mg) - Alpha-2 Blocker
+268,	L-Arginine Tablet (500 mg) - Amino Acid Supplement
+269,	Testosterone Gel (1%) - Androgen Hormone
+270,	Testosterone Injection (200 mg/mL) - Androgen Hormone
+271,	Estradiol Tablet (2 mg) - Estrogen Hormone
+272,	Premarin Tablet (0.625 mg) - Estrogen Hormone
+273,	Medroxyprogesterone Tablet (2.5 mg) - Progestin Hormone
+274,	Norethindrone Tablet (0.35 mg) - Progestin Hormone
+275,	Methyltestosterone Tablet (10 mg) - Androgen Hormone
+276,	Clomiphene Tablet (50 mg) - Selective Estrogen Receptor Modulator
+277,	Tamoxifen Tablet (20 mg) - Selective Estrogen Receptor Modulator
+278,	Anastrozole Tablet (1 mg) - Aromatase Inhibitor
+279,	Letrozole Tablet (2.5 mg) - Aromatase Inhibitor
+280,	Fulvestrant Injection (250 mg/mL) - Selective Estrogen Receptor Downregulator
+281,	Leuprolide Injection (1 mg/mL) - Gonadotropin-Releasing Hormone Agonist
+282,	Goserelin Injection (3.6 mg) - Gonadotropin-Releasing Hormone Agonist
+283,	Degarelix Injection (80 mg) - Gonadotropin-Releasing Hormone Antagonist
+284,	Naloxone Injection (0.4 mg/mL) - Opioid Antagonist
+285,	Flumazenil Injection (0.1 mg/mL) - Benzodiazepine Antagonist
+286,	Atropine Injection (0.1 mg/mL) - Anticholinergic
+287,	Epinephrine Injection (1 mg/mL) - Sympathomimetic
+288,	Norepinephrine Injection (2 mg/mL) - Sympathomimetic
+289,	Dopamine Injection (200 mg/mL) - Sympathomimetic
+290,	Dobutamine Injection (250 mg/mL) - Sympathomimetic
+291,	Isoproterenol Injection (0.2 mg/mL) - Sympathomimetic
+292,	Albuterol Inhaler (90 mcg/actuation) - Short-Acting Beta-2 Agonist
+293,	Levalbuterol Inhaler (45 mcg/actuation) - Short-Acting Beta-2 Agonist
+294,	Salmeterol Inhaler (50 mcg/actuation) - Long-Acting Beta-2 Agonist
+295,	Formoterol Inhaler (12 mcg/actuation) - Long-Acting Beta-2 Agonist
+296,	Ipratropium Inhaler (20 mcg/actuation) - Anticholinergic
+297,	Tiotropium Inhaler (18 mcg/actuation) - Anticholinergic
+298,	Budesonide Inhaler (80 mcg/actuation) - Inhaled Corticosteroid
+299,	Beclomethasone Inhaler (100 mcg/actuation) - Inhaled Corticosteroid
+300,	Fluticasone/Salmeterol Inhaler (100/50 mcg/actuation) - Inhaled Corticosteroid/Long-Acting Beta-2 Agonist Combination
+301,	Budesonide/Formoterol Inhaler (160/4.5 mcg/actuation) - Inhaled Corticosteroid/Long-Acting Beta-2 Agonist Combination
+302,	Fluticasone Inhaler (50 mcg/actuation) - Inhaled Corticosteroid
+303,	Mometasone Inhaler (110 mcg/actuation) - Inhaled Corticosteroid
+304,	Montelukast Tablet (4 mg) - Leukotriene Receptor Antagonist
+305,	Zafirlukast Tablet (10 mg) - Leukotriene Receptor Antagonist
+306,	Salicylic Acid Topical Cream (3%) - Keratolytic
+307,	Benzoyl Peroxide Topical Gel (10%) - Acne Treatment
+308,	Clindamycin Topical Lotion (2%) - Antibiotic
+309,	Tretinoin Topical Cream (0.05%) - Retinoid
+310,	Adapalene Topical Gel (0.3%) - Retinoid
+311,	Hydrocortisone Topical Cream (2%) - Corticosteroid
+312,	Mupirocin Topical Ointment (2%) - Antibiotic
+313,	Ketoconazole Topical Cream (1%) - Antifungal
+314,	Fluconazole Topical Gel (1%) - Antifungal
+315,	Tretinoin Topical Cream (0.1%) - Retinoid
+316,	Adapalene/Benzoyl Peroxide Topical Gel (0.3/2.5%) - Retinoid/Acne Treatment Combination
+317,	Clindamycin/Benzoyl Peroxide Topical Gel (1.2/2.5%) - Antibiotic/Acne Treatment Combination
+318,	Erythromycin/Benzoyl Peroxide Topical Gel (3/5%) - Antibiotic/Acne Treatment Combination
+319,	Hydroquinone Topical Cream (4%) - Skin Lightening Agent
+320,	Benzoyl Peroxide/Clindamycin Topical Gel (5/1%) - Acne Treatment/Antibiotic Combination
+321,	Tretinoin/Clindamycin Topical Gel (0.025/1%) - Retinoid/Antibiotic Combination
+322,	Mupirocin Topical Ointment (2%) - Antibiotic
+323,	Ketoconazole Topical Cream (2%) - Antifungal
+324,	Fluconazole Topical Gel (1%) - Antifungal
+325,	Nystatin Cream (100,000 units/g) - Antifungal
+326,	Clotrimazole Topical Cream (2%) - Antifungal
+327,	Fluocinonide Topical Ointment (0.05%) - High-Potency Corticosteroid
+328,	Triamcinolone Topical Ointment (0.1%) - Corticosteroid
+329,	Hydrocortisone Topical Cream (2.5%) - Low-Potency Corticosteroid
+330,	Desonide Topical Cream (0.05%) - Low-Potency Corticosteroid
+331,	Halobetasol Topical Ointment (0.05%) - High-Potency Corticosteroid
+332,	Clobetasol Topical Cream (0.05%) - High-Potency Corticosteroid
+333,	Betamethasone Topical Cream (0.05%) - High-Potency Corticosteroid
+334,	Desoximetasone Topical Cream (0.25%) - Mid-Potency Corticosteroid
+335,	Hydrocortisone Topical Cream (1%) - Low-Potency Corticosteroid
+336,	Fluticasone Topical Cream (0.05%) - Mid-Potency Corticosteroid
+337,	Acyclovir Topical Cream (5%) - Antiviral
+338,	Clotrimazole-Betamethasone Topical Cream (1/0.05%) - Antifungal/Corticosteroid Combination
+339,	Tretinoin Topical Cream (0.1%) - Retinoid
+340,	Adapalene/Benzoyl Peroxide Topical Gel (0.3/2.5%) - Retinoid/Acne Treatment Combination
+341,	Clindamycin Phosphate Topical Lotion (1%) - Antibiotic
+342,	Metronidazole Topical Gel (0.75%) - Antibiotic
+343,	Permethrin Topical Cream (5%) - Scabicide/Pediculicide
+344,	Ketoconazole Topical Cream (2%) - Antifungal
+345,	Nystatin/Triamcinolone Topical Cream (100,000 units/g - 0.1%) - Antifungal/Corticosteroid Combination
+346,	Clobetasol Topical Cream (0.05%) - High-Potency Corticosteroid
+347,	Betamethasone Topical Cream (0.05%) - High-Potency Corticosteroid
+348,	Hydrocortisone Valerate Topical Cream (0.2%) - Low-Potency Corticosteroid
+349,	Desonide Topical Cream (0.05%) - Low-Potency Corticosteroid
+350,	Triamcinolone Topical Ointment (0.1%) - Corticosteroid
+351,	Fluocinolone Topical Oil (0.01%) - Low-Potency Corticosteroid
+352,	Methotrexate Tablet (2.5 mg) - Antimetabolite
+353,	Leflunomide Tablet (20 mg) - Disease-Modifying Antirheumatic Drug
+354,	Hydroxychloroquine Tablet (200 mg) - Disease-Modifying Antirheumatic Drug
+355,	Sulfasalazine Tablet (500 mg) - Disease-Modifying Antirheumatic Drug
+356,	Celecoxib Capsule (200 mg) - Nonsteroidal Anti-Inflammatory Drug
+357,	Meloxicam Tablet (15 mg) - Nonsteroidal Anti-Inflammatory Drug
+358,	Diclofenac Tablet (50 mg) - Nonsteroidal Anti-Inflammatory Drug
+359,	Indomethacin Capsule (25 mg) - Nonsteroidal Anti-Inflammatory Drug
+360,	Prednisone Tablet (5 mg) - Corticosteroid
+361,	Prednisolone Tablet (5 mg) - Corticosteroid
+362,	Methylprednisolone Tablet (4 mg) - Corticosteroid
+363,	Triamcinolone Tablet (4 mg) - Corticosteroid
+364,	Ibuprofen Tablet (200 mg) - Nonsteroidal Anti-Inflammatory Drug
+365,	Naproxen Tablet (250 mg) - Nonsteroidal Anti-Inflammatory Drug
+366,	Fenoprofen Tablet (600 mg) - Nonsteroidal Anti-Inflammatory Drug
+367,	Piroxicam Capsule (20 mg) - Nonsteroidal Anti-Inflammatory Drug
+368,	Etodolac Tablet (400 mg) - Nonsteroidal Anti-Inflammatory Drug
+369,	Ketorolac Tablet (10 mg) - Nonsteroidal Anti-Inflammatory Drug
+370,	Oxaprozin Tablet (600 mg) - Nonsteroidal Anti-Inflammatory Drug
+371,	Nabumetone Tablet (500 mg) - Nonsteroidal Anti-Inflammatory Drug
+372,	Rofecoxib Tablet (25 mg) - Nonsteroidal Anti-Inflammatory Drug
+373,	Etoricoxib Tablet (90 mg) - Nonsteroidal Anti-Inflammatory Drug
+374,	Valdecoxib Tablet (20 mg) - Nonsteroidal Anti-Inflammatory Drug
+375,	Diflunisal Tablet (500 mg) - Nonsteroidal Anti-Inflammatory Drug
+376,	Acetaminophen Tablet (500 mg) - Analgesic
+377,	Acetaminophen Tablet (650 mg) - Analgesic
+378,	Acetaminophen Tablet (325 mg) - Analgesic
+379,	Acetaminophen Tablet (1,000 mg) - Analgesic
+380,	Acetaminophen/Codeine Tablet (300/30 mg) - Analgesic/Opioid Combination
+381,	Oxycodone Tablet (5 mg) - Opioid Analgesic
+382,	Hydrocodone/Acetaminophen Tablet (5/325 mg) - Opioid Analgesic/Analgesic Combination
+383,	Tramadol Tablet (50 mg) - Opioid Analgesic
+384,	Morphine Tablet (15 mg) - Opioid Analgesic
+385,	Fentanyl Patch (25 mcg/h) - Opioid Analgesic
+386,	Buprenorphine/Naloxone Tablet (8/2 mg) - Opioid Analgesic/Opioid Antagonist Combination
+387,	Methadone Tablet (10 mg) - Opioid Analgesic
+388,	Gabapentin Tablet (300 mg) - Anticonvulsant
+389,	Pregabalin Capsule (50 mg) - Anticonvulsant
+390,	Levetiracetam Tablet (500 mg) - Anticonvulsant
+391,	Topiramate Tablet (25 mg) - Anticonvulsant
+392,	Carbamazepine Tablet (200 mg) - Anticonvulsant
+393,	Valproic Acid Capsule (250 mg) - Anticonvulsant
+394,	Lamotrigine Tablet (100 mg) - Anticonvulsant
+395,	Phenytoin Capsule (100 mg) - Anticonvulsant
+396,	Clonazepam Tablet (1 mg) - Anticonvulsant
+397,	Diazepam Tablet (5 mg) - Benzodiazepine
+398,	Alprazolam Tablet (0.25 mg) - Benzodiazepine
+399,	Lorazepam Tablet (1 mg) - Benzodiazepine
+400,	Temazepam Capsule (15 mg) - Benzodiazepine
+401,	Clorazepate Tablet (3.75 mg) - Benzodiazepine
+402,	Oxazepam Capsule (10 mg) - Benzodiazepine
+403,	Buspirone Tablet (5 mg) - Anxiolytic
+404,	Hydroxyzine Tablet (25 mg) - Anxiolytic
+405,	Propranolol Tablet (10 mg) - Beta-Blocker
+406,	Atenolol Tablet (50 mg) - Beta-Blocker
+407,	Metoprolol Tablet (25 mg) - Beta-Blocker
+408,	Timolol Tablet (10 mg) - Beta-Blocker
+409,	Bisoprolol Tablet (5 mg) - Beta-Blocker
+410,	Carvedilol Tablet (12.5 mg) - Beta-Blocker
+411,	Nebivolol Tablet (5 mg) - Beta-Blocker
+412,	Clonidine Tablet (0.1 mg) - Alpha-2 Agonist
+413,	Guanfacine Tablet (1 mg) - Alpha-2 Agonist
+414,	Prazosin Capsule (1 mg) - Alpha-Blocker
+415,	Terazosin Capsule (1 mg) - Alpha-Blocker
+416,	Doxazosin Tablet (1 mg) - Alpha-Blocker
+417,	Tamsulosin Capsule (0.4 mg) - Alpha-Blocker
+418,	Dutasteride Capsule (0.5 mg) - 5-Alpha Reductase Inhibitor
+419,	Finasteride Tablet (1 mg) - 5-Alpha Reductase Inhibitor
+420,	Tadalafil Tablet (20 mg) - Phosphodiesterase Type 5 Inhibitor
+421,	Sildenafil Tablet (50 mg) - Phosphodiesterase Type 5 Inhibitor
+422,	Vardenafil Tablet (10 mg) - Phosphodiesterase Type 5 Inhibitor
+423,	Alprostadil Injection (20 mcg/mL) - Prostaglandin E1 Analog
+424,	Alprostadil Urethral Suppository (125 mcg) - Prostaglandin E1 Analog
+425,	Minoxidil Topical Solution (5%) - Vasodilator
+426,	Finasteride Tablet (5 mg) - 5-Alpha Reductase Inhibitor
+427,	Tamsulosin Tablet (0.4 mg) - Alpha-Blocker
+428,	Terazosin Tablet (10 mg) - Alpha-Blocker
+429,	Sildenafil Tablet (25 mg) - Phosphodiesterase Type 5 Inhibitor
+430,	Vardenafil Tablet (20 mg) - Phosphodiesterase Type 5 Inhibitor
+431,	Cialis Tablet (5 mg) - Phosphodiesterase Type 5 Inhibitor
+432,	Sildenafil Tablet (100 mg) - Phosphodiesterase Type 5 Inhibitor
+433,	Vardenafil Tablet (5 mg) - Phosphodiesterase Type 5 Inhibitor
+434,	Alprostadil Urethral Suppository (250 mcg) - Prostaglandin E1 Analog
+435,	Phentolamine Injection (1 mg/mL) - Alpha-Blocker
+436,	Papaverine Injection (30 mg/mL) - Vasodilator
+437,	Yohimbine Tablet (5.4 mg) - Alpha-2 Blocker
+438,	L-Arginine Tablet (500 mg) - Amino Acid Supplement
+439,	Testosterone Gel (1%) - Androgen Hormone
+440,	Testosterone Injection (200 mg/mL) - Androgen Hormone
+441,	Estradiol Tablet (2 mg) - Estrogen Hormone
+442,	Premarin Tablet (0.625 mg) - Estrogen Hormone
+443,	Medroxyprogesterone Tablet (2.5 mg) - Progestin Hormone
+444,	Norethindrone Tablet (0.35 mg) - Progestin Hormone
+445,	Methyltestosterone Tablet (10 mg) - Androgen Hormone
+446,	Clomiphene Tablet (50 mg) - Selective Estrogen Receptor Modulator
+447,	Tamoxifen Tablet (20 mg) - Selective Estrogen Receptor Modulator
+448,	Anastrozole Tablet (1 mg) - Aromatase Inhibitor
+449,	Letrozole Tablet (2.5 mg) - Aromatase Inhibitor
+450,	Fulvestrant Injection (250 mg/mL) - Selective Estrogen Receptor Downregulator
+451,	Leuprolide Injection (1 mg/mL) - Gonadotropin-Releasing Hormone Agonist
+452,	Goserelin Injection (3.6 mg) - Gonadotropin-Releasing Hormone Agonist
+453,	Degarelix Injection (80 mg) - Gonadotropin-Releasing Hormone Antagonist
+454,	Naloxone Injection (0.4 mg/mL) - Opioid Antagonist
+455,	Flumazenil Injection (0.1 mg/mL) - Benzodiazepine Antagonist
+456,	Atropine Injection (0.1 mg/mL) - Anticholinergic
+457,	Epinephrine Injection (1 mg/mL) - Sympathomimetic
+458,	Norepinephrine Injection (2 mg/mL) - Sympathomimetic
+459,	Dopamine Injection (200 mg/mL) - Sympathomimetic
+460,	Dobutamine Injection (250 mg/mL) - Sympathomimetic
+461,	Isoproterenol Injection (0.2 mg/mL) - Sympathomimetic
+462,	Albuterol Inhaler (90 mcg/actuation) - Short-Acting Beta-2 Agonist
+463,	Levalbuterol Inhaler (45 mcg/actuation) - Short-Acting Beta-2 Agonist
+464,	Salmeterol Inhaler (50 mcg/actuation) - Long-Acting Beta-2 Agonist
+465,	Formoterol Inhaler (12 mcg/actuation) - Long-Acting Beta-2 Agonist
+466,	Ipratropium Inhaler (20 mcg/actuation) - Anticholinergic
+467,	Tiotropium Inhaler (18 mcg/actuation) - Anticholinergic
+468,	Budesonide Inhaler (80 mcg/actuation) - Inhaled Corticosteroid
+469,	Beclomethasone Inhaler (100 mcg/actuation) - Inhaled Corticosteroid
+470,	Fluticasone/Salmeterol Inhaler (100/50 mcg/actuation) - Inhaled Corticosteroid/Long-Acting Beta-2 Agonist Combination
+471,	Budesonide/Formoterol Inhaler (160/4.5 mcg/actuation) - Inhaled Corticosteroid/Long-Acting Beta-2 Agonist Combination
+472,	Fluticasone Inhaler (50 mcg/actuation) - Inhaled Corticosteroid
+473,	Mometasone Inhaler (110 mcg/actuation) - Inhaled Corticosteroid
+474,	Montelukast Tablet (4 mg) - Leukotriene Receptor Antagonist
+475,	Zafirlukast Tablet (10 mg) - Leukotriene Receptor Antagonist
+476,	Salicylic Acid Topical Cream (3%) - Keratolytic
+477,	Benzoyl Peroxide Topical Gel (10%) - Acne Treatment
+478,	Clindamycin Topical Lotion (2%) - Antibiotic
+479,	Tretinoin Topical Cream (0.05%) - Retinoid
+480,	Adapalene Topical Gel (0.3%) - Retinoid
+481,	Hydrocortisone Topical Cream (2%) - Corticosteroid
+482,	Mupirocin Topical Ointment (2%) - Antibiotic
+483,	Ketoconazole Topical Cream (1%) - Antifungal
+484,	Fluconazole Topical Gel (1%) - Antifungal
+485,	Tretinoin Topical Cream (0.1%) - Retinoid
+486,	Adapalene/Benzoyl Peroxide Topical Gel (0.3/2.5%) - Retinoid/Acne Treatment Combination
+487,	Clindamycin/Benzoyl Peroxide Topical Gel (1.2/2.5%) - Antibiotic/Acne Treatment Combination
+488,	Erythromycin/Benzoyl Peroxide Topical Gel (3/5%) - Antibiotic/Acne Treatment Combination
+489,	Hydroquinone Topical Cream (4%) - Skin Lightening Agent
+490,	Benzoyl Peroxide/Clindamycin Topical Gel (5/1%) - Acne Treatment/Antibiotic Combination
+491,	Tretinoin/Clindamycin Topical Gel (0.025/1%) - Retinoid/Antibiotic Combination
+492,	Mupirocin Topical Ointment (2%) - Antibiotic
+493,	Ketoconazole Topical Cream (2%) - Antifungal
+494,	Fluconazole Topical Gel (1%) - Antifungal
+495,	Nystatin Cream (100,000 units/g) - Antifungal
+496,	Clotrimazole Topical Cream (2%) - Antifungal
+497,	Fluocinonide Topical Ointment (0.05%) - High-Potency Corticosteroid
+498,	Triamcinolone Topical Ointment (0.1%) - Corticosteroid
+499,	Hydrocortisone Topical Cream (2.5%) - Low-Potency Corticosteroid
+500,	Desonide Topical Cream (0.05%) - Low-Potency Corticosteroid
+501,	Halobetasol Topical Ointment (0.05%) - High-Potency Corticosteroid
+502,	Clobetasol Topical Cream (0.05%) - High-Potency Corticosteroid
+503,	Betamethasone Topical Cream (0.05%) - High-Potency Corticosteroid
+504,	Desoximetasone Topical Cream (0.25%) - Mid-Potency Corticosteroid
+505,	Hydrocortisone Topical Cream (1%) - Low-Potency Corticosteroid
+506,	Fluticasone Topical Cream (0.05%) - Mid-Potency Corticosteroid
+507,	Acyclovir Topical Cream (5%) - Antiviral
+508,	Clotrimazole-Betamethasone Topical Cream (1/0.05%) - Antifungal/Corticosteroid Combination
+509,	Tretinoin Topical Cream (0.1%) - Retinoid
+510,	Adapalene/Benzoyl Peroxide Topical Gel (0.3/2.5%) - Retinoid/Acne Treatment Combination
+511,	Clindamycin Phosphate Topical Lotion (1%) - Antibiotic
+512,	Metronidazole Topical Gel (0.75%) - Antibiotic
+513,	Permethrin Topical Cream (5%) - Scabicide/Pediculicide
+514,	Ketoconazole Topical Cream (2%) - Antifungal
+515,	Nystatin/Triamcinolone Topical Cream (100,000 units/g - 0.1%) - Antifungal/Corticosteroid Combination
+516,	Clobetasol Topical Cream (0.05%) - High-Potency Corticosteroid
+517,	Betamethasone Topical Cream (0.05%) - High-Potency Corticosteroid
+518,	Hydrocortisone Valerate Topical Cream (0.2%) - Low-Potency Corticosteroid
+519,	Desonide Topical Cream (0.05%) - Low-Potency Corticosteroid
+520,	Triamcinolone Topical Ointment (0.1%) - Corticosteroid
+521,	Fluocinolone Topical Oil (0.01%) - Low-Potency Corticosteroid
+522,	Methotrexate Tablet (2.5 mg) - Antimetabolite
+523,	Leflunomide Tablet (20 mg) - Disease-Modifying Antirheumatic Drug
+524,	Hydroxychloroquine Tablet (200 mg) - Disease-Modifying Antirheumatic Drug
+525,	Sulfasalazine Tablet (500 mg) - Disease-Modifying Antirheumatic Drug
+526,	Celecoxib Capsule (200 mg) - Nonsteroidal Anti-Inflammatory Drug
+527,	Meloxicam Tablet (15 mg) - Nonsteroidal Anti-Inflammatory Drug
+528,	Diclofenac Tablet (50 mg) - Nonsteroidal Anti-Inflammatory Drug
+529,	Indomethacin Capsule (25 mg) - Nonsteroidal Anti-Inflammatory Drug
+530,	Prednisone Tablet (5 mg) - Corticosteroid
+531,	Prednisolone Tablet (5 mg) - Corticosteroid
+532,	Methylprednisolone Tablet (4 mg) - Corticosteroid
+533,	Triamcinolone Tablet (4 mg) - Corticosteroid
+534,	Ibuprofen Tablet (200 mg) - Nonsteroidal Anti-Inflammatory Drug
+535,	Naproxen Tablet (250 mg) - Nonsteroidal Anti-Inflammatory Drug
+536,	Fenoprofen Tablet (600 mg) - Nonsteroidal Anti-Inflammatory Drug
+537,	Piroxicam Capsule (20 mg) - Nonsteroidal Anti-Inflammatory Drug
+538,	Etodolac Tablet (400 mg) - Nonsteroidal Anti-Inflammatory Drug
+539,	Ketorolac Tablet (10 mg) - Nonsteroidal Anti-Inflammatory Drug
+540,	Oxaprozin Tablet (600 mg) - Nonsteroidal Anti-Inflammatory Drug
+541,	Nabumetone Tablet (500 mg) - Nonsteroidal Anti-Inflammatory Drug
+542,	Rofecoxib Tablet (25 mg) - Nonsteroidal Anti-Inflammatory Drug
+543,	Etoricoxib Tablet (90 mg) - Nonsteroidal Anti-Inflammatory Drug
+544,	Valdecoxib Tablet (20 mg) - Nonsteroidal Anti-Inflammatory Drug
+545,	Diflunisal Tablet (500 mg) - Nonsteroidal Anti-Inflammatory Drug
+546,	Acetaminophen Tablet (500 mg) - Analgesic
+547,	Acetaminophen Tablet (650 mg) - Analgesic
+548,	Acetaminophen Tablet (325 mg) - Analgesic
+549,	Acetaminophen Tablet (1,000 mg) - Analgesic
+550,	Acetaminophen/Codeine Tablet (300/30 mg) - Analgesic/Opioid Combination
+551,	Oxycodone Tablet (5 mg) - Opioid Analgesic
+552,	Hydrocodone/Acetaminophen Tablet (5/325 mg) - Opioid Analgesic/Analgesic Combination
+553,	Tramadol Tablet (50 mg) - Opioid Analgesic
+554,	Morphine Tablet (15 mg) - Opioid Analgesic
+555,	Fentanyl Patch (25 mcg/h) - Opioid Analgesic
+556,	Buprenorphine/Naloxone Tablet (8/2 mg) - Opioid Analgesic/Opioid Antagonist Combination
+557,	Methadone Tablet (10 mg) - Opioid Analgesic
+558,	Gabapentin Tablet (300 mg) - Anticonvulsant
+559,	Pregabalin Capsule (50 mg) - Anticonvulsant
+560,	Levetiracetam Tablet (500 mg) - Anticonvulsant
+561,	Topiramate Tablet (25 mg) - Anticonvulsant
+562,	Carbamazepine Tablet (200 mg) - Anticonvulsant
+563,	Valproic Acid Capsule (250 mg) - Anticonvulsant
+564,	Lamotrigine Tablet (100 mg) - Anticonvulsant
+565,	Phenytoin Capsule (100 mg) - Anticonvulsant
+566,	Clonazepam Tablet (1 mg) - Anticonvulsant
+567,	Diazepam Tablet (5 mg) - Benzodiazepine
+568,	Alprazolam Tablet (0.25 mg) - Benzodiazepine
+569,	Lorazepam Tablet (1 mg) - Benzodiazepine
+570,	Temazepam Capsule (15 mg) - Benzodiazepine
+571,	Clorazepate Tablet (3.75 mg) - Benzodiazepine
+572,	Oxazepam Capsule (10 mg) - Benzodiazepine
+573,	Buspirone Tablet (5 mg) - Anxiolytic
+574,	Hydroxyzine Tablet (25 mg) - Anxiolytic
+575,	Propranolol Tablet (10 mg) - Beta-Blocker
+576,	Atenolol Tablet (50 mg) - Beta-Blocker
+577,	Metoprolol Tablet (25 mg) - Beta-Blocker
+578,	Timolol Tablet (10 mg) - Beta-Blocker
+579,	Bisoprolol Tablet (5 mg) - Beta-Blocker
+580,	Carvedilol Tablet (12.5 mg) - Beta-Blocker
+581,	Nebivolol Tablet (5 mg) - Beta-Blocker
+582,	Clonidine Tablet (0.1 mg) - Alpha-2 Agonist
+583,	Guanfacine Tablet (1 mg) - Alpha-2 Agonist
+584,	Prazosin Capsule (1 mg) - Alpha-Blocker
+585,	Terazosin Capsule (1 mg) - Alpha-Blocker
+586,	Doxazosin Tablet (1 mg) - Alpha-Blocker
+587,	Tamsulosin Capsule (0.4 mg) - Alpha-Blocker
+588,	Dutasteride Capsule (0.5 mg) - 5-Alpha Reductase Inhibitor
+589,	Finasteride Tablet (1 mg) - 5-Alpha Reductase Inhibitor
+590,	Tadalafil Tablet (20 mg) - Phosphodiesterase Type 5 Inhibitor
+591,	Sildenafil Tablet (50 mg) - Phosphodiesterase Type 5 Inhibitor
+592,	Vardenafil Tablet (10 mg) - Phosphodiesterase Type 5 Inhibitor
+593,	Alprostadil Injection (20 mcg/mL) - Prostaglandin E1 Analog
+594,	Alprostadil Urethral Suppository (125 mcg) - Prostaglandin E1 Analog
+595,	Minoxidil Topical Solution (5%) - Vasodilator
+596,	Finasteride Tablet (5 mg) - 5-Alpha Reductase Inhibitor
+597,	Tamsulosin Tablet (0.4 mg) - Alpha-Blocker
+598,	Terazosin Tablet (10 mg) - Alpha-Blocker
+599,	Sildenafil Tablet (25 mg) - Phosphodiesterase Type 5 Inhibitor
+600,	Vardenafil Tablet (20 mg) - Phosphodiesterase Type 5 Inhibitor
+601,	Cialis Tablet (5 mg) - Phosphodiesterase Type 5 Inhibitor
+602,	Sildenafil Tablet (100 mg) - Phosphodiesterase Type 5 Inhibitor
+603,	Vardenafil Tablet (5 mg) - Phosphodiesterase Type 5 Inhibitor
+604,	Alprostadil Urethral Suppository (250 mcg) - Prostaglandin E1 Analog
+605,	Phentolamine Injection (1 mg/mL) - Alpha-Blocker
+606,	Papaverine Injection (30 mg/mL) - Vasodilator
+607,	Yohimbine Tablet (5.4 mg) - Alpha-2 Blocker
+608,	L-Arginine Tablet (500 mg) - Amino Acid Supplement
+609,	Clonidine Tablet (0.2 mg) - Alpha-2 Agonist
+610,	Prazosin Capsule (2 mg) - Alpha-Blocker
+611,	Terazosin Capsule (2 mg) - Alpha-Blocker
+612,	Doxazosin Tablet (2 mg) - Alpha-Blocker
+613,	Tamsulosin Capsule (0.8 mg) - Alpha-Blocker
+614,	Dutasteride Capsule (0.5 mg) - 5-Alpha Reductase Inhibitor
+615,	Finasteride Tablet (1 mg) - 5-Alpha Reductase Inhibitor
+616,	Tadalafil Tablet (2.5 mg) - Phosphodiesterase Type 5 Inhibitor
+617,	Sildenafil Tablet (20 mg) - Phosphodiesterase Type 5 Inhibitor
+618,	Vardenafil Tablet (2.5 mg) - Phosphodiesterase Type 5 Inhibitor
+619,	Alprostadil Injection (10 mcg/mL) - Prostaglandin E1 Analog
+620,	Alprostadil Urethral Suppository (125 mcg) - Prostaglandin E1 Analog
+621,	Minoxidil Topical Solution (2%) - Vasodilator
+622,	Finasteride Tablet (5 mg) - 5-Alpha Reductase Inhibitor
+623,	Tamsulosin Tablet (0.2 mg) - Alpha-Blocker
+624,	Terazosin Tablet (5 mg) - Alpha-Blocker
+625,	Sildenafil Tablet (2.5 mg) - Phosphodiesterase Type 5 Inhibitor
+626,	Vardenafil Tablet (2.5 mg) - Phosphodiesterase Type 5 Inhibitor
+627,	Cialis Tablet (2.5 mg) - Phosphodiesterase Type 5 Inhibitor
+628,	Sildenafil Tablet (10 mg) - Phosphodiesterase Type 5 Inhibitor
+629,	Vardenafil Tablet (10 mg) - Phosphodiesterase Type 5 Inhibitor
+630,	Alprostadil Urethral Suppository (50 mcg) - Prostaglandin E1 Analog
+631,	Phentolamine Injection (5 mg/mL) - Alpha-Blocker
+632,	Papaverine Injection (60 mg/mL) - Vasodilator
+633,	Yohimbine Tablet (5.4 mg) - Alpha-2 Blocker
+634,	L-Arginine Tablet (1,000 mg) - Amino Acid Supplement
+635,	Testosterone Gel (1%) - Androgen Hormone
+636,	Testosterone Injection (200 mg/mL) - Androgen Hormone
+637,	Estradiol Tablet (2 mg) - Estrogen Hormone
+638,	Premarin Tablet (0.625 mg) - Estrogen Hormone
+639,	Medroxyprogesterone Tablet (2.5 mg) - Progestin Hormone
+640,	Norethindrone Tablet (0.35 mg) - Progestin Hormone
+641,	Methyltestosterone Tablet (10 mg) - Androgen Hormone
+642,	Clomiphene Tablet (50 mg) - Selective Estrogen Receptor Modulator
+643,	Tamoxifen Tablet (20 mg) - Selective Estrogen Receptor Modulator
+644,	Anastrozole Tablet (1 mg) - Aromatase Inhibitor
+645,	Letrozole Tablet (2.5 mg) - Aromatase Inhibitor
+646,	Fulvestrant Injection (250 mg/mL) - Selective Estrogen Receptor Downregulator
+647,	Leuprolide Injection (1 mg/mL) - Gonadotropin-Releasing Hormone Agonist
+648,	Goserelin Injection (3.6 mg) - Gonadotropin-Releasing Hormone Agonist
+649,	Degarelix Injection (80 mg) - Gonadotropin-Releasing Hormone Antagonist
+650,	Naloxone Injection (0.4 mg/mL) - Opioid Antagonist
+651,	Flumazenil Injection (0.1 mg/mL) - Benzodiazepine Antagonist
+652,	Atropine Injection (0.1 mg/mL) - Anticholinergic
+653,	Epinephrine Injection (1 mg/mL) - Sympathomimetic
+654,	Norepinephrine Injection (2 mg/mL) - Sympathomimetic
+655,	Dopamine Injection (200 mg/mL) - Sympathomimetic
+656,	Dobutamine Injection (250 mg/mL) - Sympathomimetic
+657,	Isoproterenol Injection (0.2 mg/mL) - Sympathomimetic
+658,	Albuterol Inhaler (90 mcg/actuation) - Short-Acting Beta-2 Agonist
+659,	Levalbuterol Inhaler (45 mcg/actuation) - Short-Acting Beta-2 Agonist
+660,	Salmeterol Inhaler (50 mcg/actuation) - Long-Acting Beta-2 Agonist
+661,	Formoterol Inhaler (12 mcg/actuation) - Long-Acting Beta-2 Agonist
+662,	Ipratropium Inhaler (20 mcg/actuation) - Anticholinergic
+663,	Tiotropium Inhaler (18 mcg/actuation) - Anticholinergic
+664,	Budesonide Inhaler (80 mcg/actuation) - Inhaled Corticosteroid
+665,	Beclomethasone Inhaler (100 mcg/actuation) - Inhaled Corticosteroid
+666,	Fluticasone/Salmeterol Inhaler (100/50 mcg/actuation) - Inhaled Corticosteroid/Long-Acting Beta-2 Agonist Combination
+667,	Budesonide/Formoterol Inhaler (160/4.5 mcg/actuation) - Inhaled Corticosteroid/Long-Acting Beta-2 Agonist Combination
+668,	Fluticasone Inhaler (50 mcg/actuation) - Inhaled Corticosteroid
+669,	Mometasone Inhaler (110 mcg/actuation) - Inhaled Corticosteroid
+670,	Montelukast Tablet (4 mg) - Leukotriene Receptor Antagonist
+671,	Zafirlukast Tablet (10 mg) - Leukotriene Receptor Antagonist
+672,	Salicylic Acid Topical Cream (3%) - Keratolytic
+673,	Benzoyl Peroxide Topical Gel (10%) - Acne Treatment
+674,	Clindamycin Topical Lotion (2%) - Antibiotic
+675,	Tretinoin Topical Cream (0.05%) - Retinoid
+676,	Adapalene Topical Gel (0.3%) - Retinoid
+677,	Hydrocortisone Topical Cream (2%) - Corticosteroid
+678,	Mupirocin Topical Ointment (2%) - Antibiotic
+679,	Ketoconazole Topical Cream (1%) - Antifungal
+680,	Fluconazole Topical Gel (1%) - Antifungal
+681,	Tretinoin Topical Cream (0.1%) - Retinoid
+682,	Adapalene/Benzoyl Peroxide Topical Gel (0.3/2.5%) - Retinoid/Acne Treatment Combination
+683,	Clindamycin/Benzoyl Peroxide Topical Gel (1.2/2.5%) - Antibiotic/Acne Treatment Combination
+684,	Erythromycin/Benzoyl Peroxide Topical Gel (3/5%) - Antibiotic/Acne Treatment Combination
+685,	Hydroquinone Topical Cream (4%) - Skin Lightening Agent
+686,	Benzoyl Peroxide/Clindamycin Topical Gel (5/1%) - Acne Treatment/Antibiotic Combination
+687,	Tretinoin/Clindamycin Topical Gel (0.025/1%) - Retinoid/Antibiotic Combination
+688,	Mupirocin Topical Ointment (2%) - Antibiotic
+689,	Ketoconazole Topical Cream (2%) - Antifungal
+690,	Fluconazole Topical Gel (1%) - Antifungal
+691,	Nystatin Cream (100,000 units/g) - Antifungal
+692,	Clotrimazole Topical Cream (2%) - Antifungal
+693,	Fluocinonide Topical Ointment (0.05%) - High-Potency Corticosteroid
+694,	Triamcinolone Topical Ointment (0.1%) - Corticosteroid
+695,	Hydrocortisone Topical Cream (2.5%) - Low-Potency Corticosteroid
+696,	Desonide Topical Cream (0.05%) - Low-Potency Corticosteroid
+697,	Halobetasol Topical Ointment (0.05%) - High-Potency Corticosteroid
+698,	Clobetasol Topical Cream (0.05%) - High-Potency Corticosteroid
+699,	Betamethasone Topical Cream (0.05%) - High-Potency Corticosteroid
+700,	Desoximetasone Topical Cream (0.25%) - Mid-Potency Corticosteroid
+701,	Hydrocortisone Topical Cream (1%) - Low-Potency Corticosteroid
+702,	Fluticasone Topical Cream (0.05%) - Mid-Potency Corticosteroid
+703,	Acyclovir Topical Cream (5%) - Antiviral
+704,	Clotrimazole-Betamethasone Topical Cream (1/0.05%) - Antifungal/Corticosteroid Combination
+705,	Tretinoin Topical Cream (0.1%) - Retinoid
+706,	Adapalene/Benzoyl Peroxide Topical Gel (0.3/2.5%) - Retinoid/Acne Treatment Combination
+707,	Clindamycin Phosphate Topical Lotion (1%) - Antibiotic
+708,	Metronidazole Topical Gel (0.75%) - Antibiotic
+709,	Permethrin Topical Cream (5%) - Scabicide/Pediculicide
+710,	Ketoconazole Topical Cream (2%) - Antifungal
+711,	Nystatin/Triamcinolone Topical Cream (100,000 units/g - 0.1%) - Antifungal/Corticosteroid Combination
+712,	Clobetasol Topical Cream (0.05%) - High-Potency Corticosteroid
+713,	Betamethasone Topical Cream (0.05%) - High-Potency Corticosteroid
+714,	Hydrocortisone Valerate Topical Cream (0.2%) - Low-Potency Corticosteroid
+715,	Desonide Topical Cream (0.05%) - Low-Potency Corticosteroid
+716,	Triamcinolone Topical Ointment (0.1%) - Corticosteroid
+717,	Fluocinolone Topical Oil (0.01%) - Low-Potency Corticosteroid
+718,	Methotrexate Tablet (2.5 mg) - Antimetabolite
+719,	Leflunomide Tablet (20 mg) - Disease-Modifying Antirheumatic Drug
+720,	Hydroxychloroquine Tablet (200 mg) - Disease-Modifying Antirheumatic Drug
+721,	Sulfasalazine Tablet (500 mg) - Disease-Modifying Antirheumatic Drug
+722,	Celecoxib Capsule (200 mg) - Nonsteroidal Anti-Inflammatory Drug
+723,	Meloxicam Tablet (15 mg) - Nonsteroidal Anti-Inflammatory Drug
+724,	Diclofenac Tablet (50 mg) - Nonsteroidal Anti-Inflammatory Drug
+725,	Indomethacin Capsule (25 mg) - Nonsteroidal Anti-Inflammatory Drug
+726,	Prednisone Tablet (5 mg) - Corticosteroid
+727,	Prednisolone Tablet (5 mg) - Corticosteroid
+728,	Methylprednisolone Tablet (4 mg) - Corticosteroid
+729,	Triamcinolone Tablet (4 mg) - Corticosteroid
+730,	Ibuprofen Tablet (200 mg) - Nonsteroidal Anti-Inflammatory Drug
+731,	Naproxen Tablet (250 mg) - Nonsteroidal Anti-Inflammatory Drug
+732,	Fenoprofen Tablet (600 mg) - Nonsteroidal Anti-Inflammatory Drug
+733,	Piroxicam Capsule (20 mg) - Nonsteroidal Anti-Inflammatory Drug
+734,	Etodolac Tablet (400 mg) - Nonsteroidal Anti-Inflammatory Drug
+735,	Ketorolac Tablet (10 mg) - Nonsteroidal Anti-Inflammatory Drug
+736,	Oxaprozin Tablet (600 mg) - Nonsteroidal Anti-Inflammatory Drug
+737,	Nabumetone Tablet (500 mg) - Nonsteroidal Anti-Inflammatory Drug
+738,	Rofecoxib Tablet (25 mg) - Nonsteroidal Anti-Inflammatory Drug
+739,	Etoricoxib Tablet (90 mg) - Nonsteroidal Anti-Inflammatory Drug
+740,	Valdecoxib Tablet (20 mg) - Nonsteroidal Anti-Inflammatory Drug
+741,	Diflunisal Tablet (500 mg) - Nonsteroidal Anti-Inflammatory Drug
+742,	Acetaminophen Tablet (500 mg) - Analgesic
+743,	Acetaminophen Tablet (650 mg) - Analgesic
+744,	Acetaminophen Tablet (325 mg) - Analgesic
+745,	Acetaminophen Tablet (1,000 mg) - Analgesic
+746,	Acetaminophen/Codeine Tablet (300/30 mg) - Analgesic/Opioid Combination
+747,	Oxycodone Tablet (5 mg) - Opioid Analgesic
+748,	Hydrocodone/Acetaminophen Tablet (5/325 mg) - Opioid Analgesic/Analgesic Combination
+749,	Tramadol Tablet (50 mg) - Opioid Analgesic
+750,	Morphine Tablet (15 mg) - Opioid Analgesic
+751,	Fentanyl Patch (25 mcg/h) - Opioid Analgesic
+752,	Buprenorphine/Naloxone Tablet (8/2 mg) - Opioid Analgesic/Opioid Antagonist Combination
+753,	Methadone Tablet (10 mg) - Opioid Analgesic
+754,	Gabapentin Tablet (300 mg) - Anticonvulsant
+755,	Pregabalin Capsule (50 mg) - Anticonvulsant
+756,	Levetiracetam Tablet (500 mg) - Anticonvulsant
+757,	Topiramate Tablet (25 mg) - Anticonvulsant
+758,	Carbamazepine Tablet (200 mg) - Anticonvulsant
+759,	Valproic Acid Capsule (250 mg) - Anticonvulsant
+760,	Lamotrigine Tablet (100 mg) - Anticonvulsant
+761,	Phenytoin Capsule (100 mg) - Anticonvulsant
+762,	Clonazepam Tablet (1 mg) - Anticonvulsant
+763,	Diazepam Tablet (5 mg) - Benzodiazepine
+764,	Alprazolam Tablet (0.25 mg) - Benzodiazepine
+765,	Lorazepam Tablet (1 mg) - Benzodiazepine
+766,	Temazepam Capsule (15 mg) - Benzodiazepine
+767,	Clorazepate Tablet (3.75 mg) - Benzodiazepine
+768,	Oxazepam Capsule (10 mg) - Benzodiazepine
+769,	Buspirone Tablet (5 mg) - Anxiolytic
+770,	Hydroxyzine Tablet (25 mg) - Anxiolytic
+771,	Propranolol Tablet (10 mg) - Beta-Blocker
+772,	Atenolol Tablet (50 mg) - Beta-Blocker
+773,	Metoprolol Tablet(25 mg) - Beta-Blocker
+774,	Timolol Tablet (10 mg) - Beta-Blocker
+775,	Bisoprolol Tablet (5 mg) - Beta-Blocker
+776,	Carvedilol Tablet (12.5 mg) - Beta-Blocker
+777,	Nebivolol Tablet (5 mg) - Beta-Blocker
+778,	Clonidine Tablet (0.1 mg) - Alpha-2 Agonist
+779,	Guanfacine Tablet (1 mg) - Alpha-2 Agonist
+780,	Prazosin Capsule (1 mg) - Alpha-Blocker
+781,	Terazosin Capsule (1 mg) - Alpha-Blocker
+782,	Doxazosin Tablet (1 mg) - Alpha-Blocker
+783,	Tamsulosin Capsule (0.4 mg) - Alpha-Blocker
+784,	Dutasteride Capsule (0.5 mg) - 5-Alpha Reductase Inhibitor
+785,	Finasteride Tablet (1 mg) - 5-Alpha Reductase Inhibitor
+786,	Tadalafil Tablet (20 mg) - Phosphodiesterase Type 5 Inhibitor
+787,	Sildenafil Tablet (50 mg) - Phosphodiesterase Type 5 Inhibitor
+788,	Vardenafil Tablet (10 mg) - Phosphodiesterase Type 5 Inhibitor
+789,	Alprostadil Injection (20 mcg/mL) - Prostaglandin E1 Analog
+790,	Alprostadil Urethral Suppository (125 mcg) - Prostaglandin E1 Analog
+791,	Minoxidil Topical Solution (5%) - Vasodilator
+792,	Finasteride Tablet (5 mg) - 5-Alpha Reductase Inhibitor
+793,	Tamsulosin Tablet (0.4 mg) - Alpha-Blocker
+794,	Terazosin Tablet (10 mg) - Alpha-Blocker
+795,	Sildenafil Tablet (25 mg) - Phosphodiesterase Type 5 Inhibitor
+796,	Vardenafil Tablet (20 mg) - Phosphodiesterase Type 5 Inhibitor
+797,	Cialis Tablet (5 mg) - Phosphodiesterase Type 5 Inhibitor
+798,	Sildenafil Tablet (100 mg) - Phosphodiesterase Type 5 Inhibitor
+799,	Vardenafil Tablet (5 mg) - Phosphodiesterase Type 5 Inhibitor
+800,	Alprostadil Urethral Suppository (250 mcg) - Prostaglandin E1 Analog
+801,	Phentolamine Injection (1 mg/mL) - Alpha-Blocker
+802,	Papaverine Injection (30 mg/mL) - Vasodilator
+803,	Yohimbine Tablet (5.4 mg) - Alpha-2 Blocker
+804,	L-Arginine Tablet (500 mg) - Amino Acid Supplement
+805,	Clonidine Tablet (0.2 mg) - Alpha-2 Agonist
+806,	Prazosin Capsule (2 mg) - Alpha-Blocker
+807,	Terazosin Capsule (2 mg) - Alpha-Blocker
+808,	Doxazosin Tablet (2 mg) - Alpha-Blocker
+809,	Tamsulosin Capsule (0.8 mg) - Alpha-Blocker
+810,	Dutasteride Capsule (0.5 mg) - 5-Alpha Reductase Inhibitor
+811,	Finasteride Tablet (5 mg) - 5-Alpha Reductase Inhibitor
+812,	Tadalafil Tablet (2.5 mg) - Phosphodiesterase Type 5 Inhibitor
+813,	Sildenafil Tablet (20 mg) - Phosphodiesterase Type 5 Inhibitor
+814,	Vardenafil Tablet (2.5 mg) - Phosphodiesterase Type 5 Inhibitor
+815,	Alprostadil Injection (10 mcg/mL) - Prostaglandin E1 Analog
+816,	Alprostadil Urethral Suppository (125 mcg) - Prostaglandin E1 Analog
+817,	Minoxidil Topical Solution (2%) - Vasodilator
+818,	Finasteride Tablet (5 mg) - 5-Alpha Reductase Inhibitor
+819,	Tamsulosin Tablet (0.2 mg) - Alpha-Blocker
+820,	Terazosin Tablet (5 mg) - Alpha-Blocker
+821,	Sildenafil Tablet (2.5 mg) - Phosphodiesterase Type 5 Inhibitor
+822,	Vardenafil Tablet (2.5 mg) - Phosphodiesterase Type 5 Inhibitor
+823,	Cialis Tablet (2.5 mg) - Phosphodiesterase Type 5 Inhibitor
+824,	Sildenafil Tablet (10 mg) - Phosphodiesterase Type 5 Inhibitor
+825,	Vardenafil Tablet (10 mg) - Phosphodiesterase Type 5 Inhibitor
+826,	Alprostadil Urethral Suppository (50 mcg) - Prostaglandin E1 Analog
+827,	Phentolamine Injection (5 mg/mL) - Alpha-Blocker
+828,	Papaverine Injection (60 mg/mL) - Vasodilator
+829,	Yohimbine Tablet (5.4 mg) - Alpha-2 Blocker
+830,	L-Arginine Tablet (1,000 mg) - Amino Acid Supplement
+831,	Testosterone Gel (1%) - Androgen Hormone
+832,	Testosterone Injection (200 mg/mL) - Androgen Hormone
+833,	Estradiol Tablet (2 mg) - Estrogen Hormone
+834,	Premarin Tablet (0.625 mg) - Estrogen Hormone
+835,	Medroxyprogesterone Tablet (2.5 mg) - Progestin Hormone
+836,	Norethindrone Tablet (0.35 mg) - Progestin Hormone
+837,	Methyltestosterone Tablet (10 mg) - Androgen Hormone
+838,	Clomiphene Tablet (50 mg) - Selective Estrogen Receptor Modulator
+839,	Tamoxifen Tablet (20 mg) - Selective Estrogen Receptor Modulator
+840,	Anastrozole Tablet (1 mg) - Aromatase Inhibitor
+841,	Letrozole Tablet (2.5 mg) - Aromatase Inhibitor
+842,	Fulvestrant Injection (250 mg/mL) - Selective Estrogen Receptor Downregulator
+843,	Leuprolide Injection (1 mg/mL) - Gonadotropin-Releasing Hormone Agonist
+844,	Goserelin Injection (3.6 mg) - Gonadotropin-Releasing Hormone Agonist
+845,	Degarelix Injection (80 mg) - Gonadotropin-Releasing Hormone Antagonist
+846,	Naloxone Injection (0.4 mg/mL) - Opioid Antagonist
+847,	Flumazenil Injection (0.1 mg/mL) - Benzodiazepine Antagonist
+848,	Atropine Injection (0.1 mg/mL) - Anticholinergic
+849,	Epinephrine Injection (1 mg/mL) - Sympathomimetic
+850,	Norepinephrine Injection (2 mg/mL) - Sympathomimetic
+851,	Dopamine Injection (200 mg/mL) - Sympathomimetic
+852,	Dobutamine Injection (250 mg/mL) - Sympathomimetic
+853,	Isoproterenol Injection (0.2 mg/mL) - Sympathomimetic
+854,	Albuterol Inhaler (90 mcg/actuation) - Short-Acting Beta-2 Agonist
+855,	Levalbuterol Inhaler (45 mcg/actuation) - Short-Acting Beta-2 Agonist
+856,	Salmeterol Inhaler (50 mcg/actuation) - Long-Acting Beta-2 Agonist
+857,	Formoterol Inhaler (12 mcg/actuation) - Long-Acting Beta-2 Agonist
+858,	Ipratropium Inhaler (20 mcg/actuation) - Anticholinergic
+859,	Tiotropium Inhaler (18 mcg/actuation) - Anticholinergic
+860,	Budesonide Inhaler (80 mcg/actuation) - Inhaled Corticosteroid
+861,	Beclomethasone Inhaler (100 mcg/actuation) - Inhaled Corticosteroid
+862,	Fluticasone/Salmeterol Inhaler (100/50 mcg/actuation) - Inhaled Corticosteroid/Long-Acting Beta-2 Agonist Combination
+863,	Budesonide/Formoterol Inhaler (160/4.5 mcg/actuation) - Inhaled Corticosteroid/Long-Acting Beta-2 Agonist Combination
+864,	Fluticasone Inhaler (50 mcg/actuation) - Inhaled Corticosteroid
+865,	Mometasone Inhaler (110 mcg/actuation) - Inhaled Corticosteroid
+866,	Montelukast Tablet (4 mg) - Leukotriene Receptor Antagonist
+867,	Zafirlukast Tablet (10 mg) - Leukotriene Receptor Antagonist
+868,	Salicylic Acid Topical Cream (3%) - Keratolytic
+869,	Benzoyl Peroxide Topical Gel (10%) - Acne Treatment
+870,	Clindamycin Topical Lotion (2%) - Antibiotic
+871,	Tretinoin Topical Cream (0.05%) - Retinoid
+872,	Adapalene Topical Gel (0.3%) - Retinoid
+873,	Hydrocortisone Topical Cream (2%) - Corticosteroid
+874,	Mupirocin Topical Ointment (2%) - Antibiotic
+875,	Ketoconazole Topical Cream (1%) - Antifungal
+876,	Fluconazole Topical Gel (1%) - Antifungal
+877,	Tretinoin Topical Cream (0.1%) - Retinoid
+878,	Adapalene/Benzoyl Peroxide Topical Gel (0.3/2.5%) - Retinoid/Acne Treatment Combination
+879,	Clindamycin/Benzoyl Peroxide Topical Gel (1.2/2.5%) - Antibiotic/Acne Treatment Combination
+880,	Erythromycin/Benzoyl Peroxide Topical Gel (3/5%) - Antibiotic/Acne Treatment Combination
+881,	Hydroquinone Topical Cream (4%) - Skin Lightening Agent
+882,	Benzoyl Peroxide/Clindamycin Topical Gel (5/1%) - Acne Treatment/Antibiotic Combination
+883,	Tretinoin/Clindamycin Topical Gel (0.025/1%) - Retinoid/Antibiotic Combination
+884,	Mupirocin Topical Ointment (2%) - Antibiotic
+885,	Ketoconazole Topical Cream (2%) - Antifungal
+886,	Fluconazole Topical Gel (1%) - Antifungal
+887,	Nystatin Cream (100,000 units/g) - Antifungal
+888,	Clotrimazole Topical Cream (2%) - Antifungal
+889,	Fluocinonide Topical Ointment (0.05%) - High-Potency Corticosteroid
+890,	Triamcinolone Topical Ointment (0.1%) - Corticosteroid
+891,	Hydrocortisone Topical Cream (2.5%) - Low-Potency Corticosteroid
+892,	Desonide Topical Cream (0.05%) - Low-Potency Corticosteroid
+893,	Halobetasol Topical Ointment (0.05%) - High-Potency Corticosteroid
+894,	Clobetasol Topical Cream (0.05%) - High-Potency Corticosteroid
+895,	Betamethasone Topical Cream (0.05%) - High-Potency Corticosteroid
+896,	Desoximetasone Topical Cream (0.25%) - Mid-Potency Corticosteroid
+897,	Hydrocortisone Topical Cream (1%) - Low-Potency Corticosteroid
+898,	Fluticasone Topical Cream (0.05%) - Mid-Potency Corticosteroid
+899,	Acyclovir Topical Cream (5%) - Antiviral
+900,	Clotrimazole-Betamethasone Topical Cream (1/0.05%) - Antifungal/Corticosteroid Combination
+901,	Tretinoin Topical Cream (0.1%) - Retinoid
+902,	Adapalene/Benzoyl Peroxide Topical Gel (0.3/2.5%) - Retinoid/Acne Treatment Combination
+903,	Clindamycin Phosphate Topical Lotion (1%) - Antibiotic
+904,	Metronidazole Topical Gel (0.75%) - Antibiotic
+905,	Permethrin Topical Cream (5%) - Scabicide/Pediculicide
+906,	Ketoconazole Topical Cream (2%) - Antifungal
+907,	Nystatin/Triamcinolone Topical Cream (100,000 units/g - 0.1%) - Antifungal/Corticosteroid Combination
+908,	Clobetasol Topical Cream (0.05%) - High-Potency Corticosteroid
+909,	Betamethasone Topical Cream (0.05%) - High-Potency Corticosteroid
+910,	Hydrocortisone Valerate Topical Cream (0.2%) - Low-Potency Corticosteroid
+911,	Desonide Topical Cream (0.05%) - Low-Potency Corticosteroid
+912,	Triamcinolone Topical Ointment (0.1%) - Corticosteroid
+913,	Fluocinolone Topical Oil (0.01%) - Low-Potency Corticosteroid
+914,	Methotrexate Tablet (2.5 mg) - Antimetabolite
+915,	Leflunomide Tablet (20 mg) - Disease-Modifying Antirheumatic Drug
+916,	Hydroxychloroquine Tablet (200 mg) - Disease-Modifying Antirheumatic Drug
+917,	Sulfasalazine Tablet (500 mg) - Disease-Modifying Antirheumatic Drug
+918,	Celecoxib Capsule (200 mg) - Nonsteroidal Anti-Inflammatory Drug
+919,	Meloxicam Tablet (15 mg) - Nonsteroidal Anti-Inflammatory Drug
+920,	Diclofenac Tablet (50 mg) - Nonsteroidal Anti-Inflammatory Drug
+921,	Indomethacin Capsule (25 mg) - Nonsteroidal Anti-Inflammatory Drug
+922,	Prednisone Tablet (5 mg) - Corticosteroid
+923,	Prednisolone Tablet (5 mg) - Corticosteroid
+924,	Methylprednisolone Tablet (4 mg) - Corticosteroid
+925,	Triamcinolone Tablet (4 mg) - Corticosteroid
+926,	Ibuprofen Tablet (200 mg) - Nonsteroidal Anti-Inflammatory Drug
+927,	Naproxen Tablet (250 mg) - Nonsteroidal Anti-Inflammatory Drug
+928,	Fenoprofen Tablet (600 mg) - Nonsteroidal Anti-Inflammatory Drug
+929,	Piroxicam Capsule (20 mg) - Nonsteroidal Anti-Inflammatory Drug
+930,	Etodolac Tablet (400 mg) - Nonsteroidal Anti-Inflammatory Drug
+931,	Ketorolac Tablet (10 mg) - Nonsteroidal Anti-Inflammatory Drug
+932,	Oxaprozin Tablet (600 mg) - Nonsteroidal Anti-Inflammatory Drug
+933,	Nabumetone Tablet (500 mg) - Nonsteroidal Anti-Inflammatory Drug
+934,	Rofecoxib Tablet (25 mg) - Nonsteroidal Anti-Inflammatory Drug
+935,	Etoricoxib Tablet (90 mg) - Nonsteroidal Anti-Inflammatory Drug
+936,	Valdecoxib Tablet (20 mg) - Nonsteroidal Anti-Inflammatory Drug
+937,	Diflunisal Tablet (500 mg) - Nonsteroidal Anti-Inflammatory Drug
+938,	Acetaminophen Tablet (500 mg) - Analgesic
+939,	Acetaminophen Tablet (650 mg) - Analgesic
+940,	Acetaminophen Tablet (325 mg) - Analgesic
+941,	Acetaminophen Tablet (1,000 mg) - Analgesic
+942,	Acetaminophen/Codeine Tablet (300/30 mg) - Analgesic/Opioid Combination
+943,	Oxycodone Tablet (5 mg) - Opioid Analgesic
+944,	Hydrocodone/Acetaminophen Tablet (5/325 mg) - Opioid Analgesic/Analgesic Combination
+945,	Tramadol Tablet (50 mg) - Opioid Analgesic
+946,	Morphine Tablet (15 mg) - Opioid Analgesic
+947,	Fentanyl Patch (25 mcg/h) - Opioid Analgesic
+948,	Buprenorphine/Naloxone Tablet (8/2 mg) - Opioid Analgesic/Opioid Antagonist Combination
+949,	Methadone Tablet (10 mg) - Opioid Analgesic
+950,	Gabapentin Tablet (300 mg) - Anticonvulsant
+951,	Pregabalin Capsule (50 mg) - Anticonvulsant
+952,	Levetiracetam Tablet (500 mg) - Anticonvulsant
+953,	Topiramate Tablet (25 mg) - Anticonvulsant
+954,	Carbamazepine Tablet (200 mg) - Anticonvulsant
+955,	Valproic Acid Capsule (250 mg) - Anticonvulsant
+956,	Lamotrigine Tablet (100 mg) - Anticonvulsant
+957,	Phenytoin Capsule (100 mg) - Anticonvulsant
+958,	Clonazepam Tablet (1 mg) - Anticonvulsant
+959,	Diazepam Tablet (5 mg) - Benzodiazepine
+960,	Alprazolam Tablet (0.25 mg) - Benzodiazepine
+961,	Lorazepam Tablet (1 mg) - Benzodiazepine
+962,	Temazepam Capsule (15 mg) - Benzodiazepine
+963,	Clorazepate Tablet (3.75 mg) - Benzodiazepine
+964,	Oxazepam Capsule (10 mg) - Benzodiazepine
+965,	Buspirone Tablet (5 mg) - Anxiolytic
+966,	Hydroxyzine Tablet (25 mg) - Anxiolytic
+967,	Propranolol Tablet (10 mg) - Beta-Blocker
+968,	Atenolol Tablet (50 mg) - Beta-Blocker
+969,	Metoprolol Tablet (25 mg) - Beta-Blocker
+970,	Timolol Tablet (10 mg) - Beta-Blocker
+971,	Bisoprolol Tablet (5 mg) - Beta-Blocker
+972,	Carvedilol Tablet (12.5 mg) - Beta-Blocker
+973,	Nebivolol Tablet (5 mg) - Beta-Blocker
+974,	Clonidine Tablet (0.1 mg) - Alpha-2 Agonist
+975,	Guanfacine Tablet (1 mg) - Alpha-2 Agonist
+976,	Prazosin Capsule (1 mg) - Alpha-Blocker
+977,	Terazosin Capsule (1 mg) - Alpha-Blocker
+978,	Doxazosin Tablet (1 mg) - Alpha-Blocker
+979,	Tamsulosin Capsule (0.4 mg) - Alpha-Blocker
+980,	Dutasteride Capsule (0.5 mg) - 5-Alpha Reductase Inhibitor
+981,	Finasteride Tablet (1 mg) - 5-Alpha Reductase Inhibitor
+982,	Tadalafil Tablet (20 mg) - Phosphodiesterase Type 5 Inhibitor
+983,	Sildenafil Tablet (50 mg) - Phosphodiesterase Type 5 Inhibitor
+984,	Vardenafil Tablet (10 mg) - Phosphodiesterase Type 5 Inhibitor
+985,	Alprostadil Injection (20 mcg/mL) - Prostaglandin E1 Analog
+986,	Alprostadil Urethral Suppository (125 mcg) - Prostaglandin E1 Analog
+987,	Minoxidil Topical Solution (5%) - Vasodilator
+988,	Finasteride Tablet (5 mg) - 5-Alpha Reductase Inhibitor
+989,	Tamsulosin Tablet (0.4 mg) - Alpha-Blocker
+990,	Terazosin Tablet (10 mg) - Alpha-Blocker
+991,	Sildenafil Tablet (25 mg) - Phosphodiesterase Type 5 Inhibitor
+992,	Vardenafil Tablet (20 mg) - Phosphodiesterase Type 5 Inhibitor
+993,	Cialis Tablet (5 mg) - Phosphodiesterase Type 5 Inhibitor
+994,	Sildenafil Tablet (100 mg) - Phosphodiesterase Type 5 Inhibitor
+995,	Vardenafil Tablet (5 mg) - Phosphodiesterase Type 5 Inhibitor
+996,	Alprostadil Urethral Suppository (250 mcg) - Prostaglandin E1 Analog
+997,	Phentolamine Injection (1 mg/mL) - Alpha-Blocker
+998,	Papaverine Injection (30 mg/mL) - Vasodilator
+999,	Yohimbine Tablet (5.4 mg) - Alpha-2 Blocker
+1000,	L-Arginine Tablet (500 mg) - Amino Acid Supplement

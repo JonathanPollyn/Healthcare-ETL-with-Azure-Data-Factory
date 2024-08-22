@@ -1,0 +1,964 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/20/2024 4:58:26 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="JONATHAN-POLLYN"
+  DTS:CreatorName="JONATHAN-POLLYN\Jonathan Pollyn"
+  DTS:DTSID="{26C53995-FBD0-456E-A754-3CBBF49B7CBF}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="load_generic_medication"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{CE6260D2-824D-4CB2-AC63-5BC50C68A088}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Achive]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{4258A455-4927-47D3-8AED-1C3974DD3D86}"
+      DTS:ObjectName="Achive">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\Projects\Hands-On_Healthcare_Data_Analysis_End_To_End\Achive" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[db_conn]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4CC908E8-0475-4F25-9C75-C0DD5527B6A7}"
+      DTS:ObjectName="db_conn">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=JONATHAN-POLLYN\IBIFUBARA;Initial Catalog=Healthcare_Data_Analysis;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[generic_med_con]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{951B6FBE-B85B-41E7-B335-4537E5257993}"
+      DTS:ObjectName="generic_med_con">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::medFilePath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{63117D04-4111-429F-8123-B6A15F21F1B9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Medication"
+              DTS:DTSID="{E2D91656-6093-4720-A564-ECDB23FF704A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2C46D0FA-F558-4BA7-BA58-2065470AA3BD}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="fileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2AC7E482-DB14-4A50-AB42-BE0E513B39CB}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="GETDATE()"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="LoadDT">
+      <DTS:VariableValue
+        DTS:DataType="7">8/21/2024 12:52:53 PM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{309CBEF1-C25E-4456-86D9-1652256DD9E7}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="medFilePath">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load Generic Medication File"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{C37EDCF9-D956-4D3C-B04E-BA5971DCCB07}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Generic Medication File">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Load Generic Medication File\Loop Through Files"
+          DTS:CreationName="STOCK:FOREACHLOOP"
+          DTS:Description="Foreach Loop Container"
+          DTS:DTSID="{89A429E3-A7CD-4AFD-9CD0-570AB8BC14D2}"
+          DTS:ExecutableType="STOCK:FOREACHLOOP"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Loop Through Files">
+          <DTS:ForEachEnumerator
+            DTS:CreationName="Microsoft.ForEachFileEnumerator"
+            DTS:DTSID="{93BF2150-E4B6-4855-A0C9-EEFD41A64026}"
+            DTS:ObjectName="{93BF2150-E4B6-4855-A0C9-EEFD41A64026}">
+            <DTS:ObjectData>
+              <ForEachFileEnumeratorProperties>
+                <FEFEProperty
+                  Folder="C:\Projects\Hands-On_Healthcare_Data_Analysis_End_To_End\Data" />
+                <FEFEProperty
+                  FileSpec="Generic_Medication*.txt" />
+                <FEFEProperty
+                  FileNameRetrievalType="0" />
+                <FEFEProperty
+                  Recurse="0" />
+              </ForEachFileEnumeratorProperties>
+            </DTS:ObjectData>
+          </DTS:ForEachEnumerator>
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Load Generic Medication File\Loop Through Files\Execute SP to Load Base Table"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{A7E0074E-4CB5-4323-864F-453F56388BA8}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Execute SP to Load Base Table"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{4CC908E8-0475-4F25-9C75-C0DD5527B6A7}"
+                  SQLTask:SqlStatementSource="EXEC dbo.sp_load_generic_Med_Names" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Load Generic Medication File\Loop Through Files\Load Data"
+              DTS:CreationName="Microsoft.Pipeline"
+              DTS:Description="Data Flow Task"
+              DTS:DTSID="{30C96500-1FD2-46DC-9BB2-9EE29208B4ED}"
+              DTS:ExecutableType="Microsoft.Pipeline"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Load Data"
+              DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <pipeline
+                  version="1">
+                  <components>
+                    <component
+                      refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Data Conversion"
+                      componentClassID="Microsoft.DataConvert"
+                      contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                      description="Data Conversion"
+                      name="Data Conversion"
+                      usesDispositions="true">
+                      <inputs>
+                        <input
+                          refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Data Conversion.Inputs[Data Conversion Input]"
+                          name="Data Conversion Input">
+                          <inputColumns>
+                            <inputColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Data Conversion.Inputs[Data Conversion Input].Columns[ Medication]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName=" Medication"
+                              lineageId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Output].Columns[ Medication]" />
+                          </inputColumns>
+                          <externalMetadataColumns />
+                        </input>
+                      </inputs>
+                      <outputs>
+                        <output
+                          refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Data Conversion.Outputs[Data Conversion Output]"
+                          exclusionGroup="1"
+                          name="Data Conversion Output"
+                          synchronousInputId="Package\Load Generic Medication File\Loop Through Files\Load Data\Data Conversion.Inputs[Data Conversion Input]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Data Conversion.Outputs[Data Conversion Output].Columns[DC_Medication]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              length="1000"
+                              lineageId="Package\Load Generic Medication File\Loop Through Files\Load Data\Data Conversion.Outputs[Data Conversion Output].Columns[DC_Medication]"
+                              name="DC_Medication"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Specifies the input column used as the source of data for the conversion."
+                                  name="SourceInputColumnLineageID">#{Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Output].Columns[ Medication]}</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                              </properties>
+                            </outputColumn>
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                        <output
+                          refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Data Conversion.Outputs[Data Conversion Error Output]"
+                          exclusionGroup="1"
+                          isErrorOut="true"
+                          name="Data Conversion Error Output"
+                          synchronousInputId="Package\Load Generic Medication File\Loop Through Files\Load Data\Data Conversion.Inputs[Data Conversion Input]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Load Generic Medication File\Loop Through Files\Load Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Load Generic Medication File\Loop Through Files\Load Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                    <component
+                      refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Derived Column"
+                      componentClassID="Microsoft.DerivedColumn"
+                      contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                      description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                      name="Derived Column"
+                      usesDispositions="true">
+                      <inputs>
+                        <input
+                          refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Derived Column.Inputs[Derived Column Input]"
+                          description="Input to the Derived Column Transformation"
+                          name="Derived Column Input">
+                          <externalMetadataColumns />
+                        </input>
+                      </inputs>
+                      <outputs>
+                        <output
+                          refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Derived Column.Outputs[Derived Column Output]"
+                          description="Default Output of the Derived Column Transformation"
+                          exclusionGroup="1"
+                          name="Derived Column Output"
+                          synchronousInputId="Package\Load Generic Medication File\Loop Through Files\Load Data\Derived Column.Inputs[Derived Column Input]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Derived Column.Outputs[Derived Column Output].Columns[LoadDT]"
+                              dataType="date"
+                              errorOrTruncationOperation="Computation"
+                              errorRowDisposition="FailComponent"
+                              lineageId="Package\Load Generic Medication File\Loop Through Files\Load Data\Derived Column.Outputs[Derived Column Output].Columns[LoadDT]"
+                              name="LoadDT"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.String"
+                                  description="Derived Column Expression"
+                                  name="Expression">@[User::LoadDT]</property>
+                                <property
+                                  containsID="true"
+                                  dataType="System.String"
+                                  description="Derived Column Friendly Expression"
+                                  expressionType="Notify"
+                                  name="FriendlyExpression">@[User::LoadDT]</property>
+                              </properties>
+                            </outputColumn>
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                        <output
+                          refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Derived Column.Outputs[Derived Column Error Output]"
+                          description="Error Output of the Derived Column Transformation"
+                          exclusionGroup="1"
+                          isErrorOut="true"
+                          name="Derived Column Error Output"
+                          synchronousInputId="Package\Load Generic Medication File\Loop Through Files\Load Data\Derived Column.Inputs[Derived Column Input]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Load Generic Medication File\Loop Through Files\Load Data\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Load Generic Medication File\Loop Through Files\Load Data\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                    <component
+                      refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names"
+                      componentClassID="Microsoft.FlatFileSource"
+                      contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                      description="Flat File Source"
+                      localeId="1033"
+                      name="Src - Generic Medication Names"
+                      usesDispositions="true"
+                      version="1">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Specifies whether zero-length columns are treated as null."
+                          name="RetainNulls">false</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                          name="FileNameColumnName"></property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Connections[FlatFileConnection]"
+                          connectionManagerID="Package.ConnectionManagers[generic_med_con]"
+                          connectionManagerRefId="Package.ConnectionManagers[generic_med_con]"
+                          name="FlatFileConnection" />
+                      </connections>
+                      <outputs>
+                        <output
+                          refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Output]"
+                          name="Flat File Source Output">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Output].Columns[ID]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Output].ExternalColumns[ID]"
+                              length="50"
+                              lineageId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Output].Columns[ID]"
+                              name="ID"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Output].Columns[ Medication]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Output].ExternalColumns[ Medication]"
+                              length="50"
+                              lineageId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Output].Columns[ Medication]"
+                              name=" Medication"
+                              truncationRowDisposition="IgnoreFailure">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                          </outputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Output].ExternalColumns[ID]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="ID" />
+                            <externalMetadataColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Output].ExternalColumns[ Medication]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name=" Medication" />
+                          </externalMetadataColumns>
+                        </output>
+                        <output
+                          refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Error Output]"
+                          isErrorOut="true"
+                          name="Flat File Source Error Output">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                              codePage="1252"
+                              dataType="text"
+                              description="Flat File Source Error Output Column"
+                              lineageId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                              name="Flat File Source Error Output Column" />
+                            <outputColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                    <component
+                      refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names"
+                      componentClassID="Microsoft.OLEDBDestination"
+                      contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                      description="OLE DB Destination"
+                      name="Stg - Generic Medication Names"
+                      usesDispositions="true"
+                      version="4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                          name="CommandTimeout">0</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the name of the database object used to open a rowset."
+                          name="OpenRowset">[dbo].[generic_medication_names_stg]</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the variable that contains the name of the database object used to open a rowset."
+                          name="OpenRowsetVariable"></property>
+                        <property
+                          dataType="System.String"
+                          description="The SQL command to be executed."
+                          name="SqlCommand"
+                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column code page to use when code page information is unavailable from the data source."
+                          name="DefaultCodePage">1252</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Forces the use of the DefaultCodePage property value when describing character data."
+                          name="AlwaysUseDefaultCodePage">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the mode used to access the database."
+                          name="AccessMode"
+                          typeConverter="AccessMode">3</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                          name="FastLoadKeepIdentity">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                          name="FastLoadKeepNulls">false</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                          name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                          name="FastLoadMaxInsertCommitSize">2147483647</property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names.Connections[OleDbConnection]"
+                          connectionManagerID="Package.ConnectionManagers[db_conn]"
+                          connectionManagerRefId="Package.ConnectionManagers[db_conn]"
+                          description="The OLE DB runtime connection used to access the database."
+                          name="OleDbConnection" />
+                      </connections>
+                      <inputs>
+                        <input
+                          refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names.Inputs[OLE DB Destination Input]"
+                          errorOrTruncationOperation="Insert"
+                          errorRowDisposition="FailComponent"
+                          hasSideEffects="true"
+                          name="OLE DB Destination Input">
+                          <inputColumns>
+                            <inputColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names.Inputs[OLE DB Destination Input].Columns[ID]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="ID"
+                              externalMetadataColumnId="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                              lineageId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Output].Columns[ID]" />
+                            <inputColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names.Inputs[OLE DB Destination Input].Columns[DC_Medication]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="1000"
+                              cachedName="DC_Medication"
+                              externalMetadataColumnId="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names.Inputs[OLE DB Destination Input].ExternalColumns[Medication_Name]"
+                              lineageId="Package\Load Generic Medication File\Loop Through Files\Load Data\Data Conversion.Outputs[Data Conversion Output].Columns[DC_Medication]" />
+                            <inputColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names.Inputs[OLE DB Destination Input].Columns[LoadDT]"
+                              cachedDataType="date"
+                              cachedName="LoadDT"
+                              externalMetadataColumnId="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names.Inputs[OLE DB Destination Input].ExternalColumns[LoadDt]"
+                              lineageId="Package\Load Generic Medication File\Loop Through Files\Load Data\Derived Column.Outputs[Derived Column Output].Columns[LoadDT]" />
+                          </inputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                              dataType="i4"
+                              name="ID" />
+                            <externalMetadataColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names.Inputs[OLE DB Destination Input].ExternalColumns[Medication_Name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="1000"
+                              name="Medication_Name" />
+                            <externalMetadataColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names.Inputs[OLE DB Destination Input].ExternalColumns[LoadDt]"
+                              dataType="dbDate"
+                              name="LoadDt" />
+                          </externalMetadataColumns>
+                        </input>
+                      </inputs>
+                      <outputs>
+                        <output
+                          refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names.Outputs[OLE DB Destination Error Output]"
+                          exclusionGroup="1"
+                          isErrorOut="true"
+                          name="OLE DB Destination Error Output"
+                          synchronousInputId="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names.Inputs[OLE DB Destination Input]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                  </components>
+                  <paths>
+                    <path
+                      refId="Package\Load Generic Medication File\Loop Through Files\Load Data.Paths[Data Conversion Output]"
+                      endId="Package\Load Generic Medication File\Loop Through Files\Load Data\Derived Column.Inputs[Derived Column Input]"
+                      name="Data Conversion Output"
+                      startId="Package\Load Generic Medication File\Loop Through Files\Load Data\Data Conversion.Outputs[Data Conversion Output]" />
+                    <path
+                      refId="Package\Load Generic Medication File\Loop Through Files\Load Data.Paths[Derived Column Output]"
+                      endId="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names.Inputs[OLE DB Destination Input]"
+                      name="Derived Column Output"
+                      startId="Package\Load Generic Medication File\Loop Through Files\Load Data\Derived Column.Outputs[Derived Column Output]" />
+                    <path
+                      refId="Package\Load Generic Medication File\Loop Through Files\Load Data.Paths[Flat File Source Output]"
+                      endId="Package\Load Generic Medication File\Loop Through Files\Load Data\Data Conversion.Inputs[Data Conversion Input]"
+                      name="Flat File Source Output"
+                      startId="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names.Outputs[Flat File Source Output]" />
+                  </paths>
+                </pipeline>
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Load Generic Medication File\Loop Through Files\Move Proccessed Files"
+              DTS:CreationName="Microsoft.FileSystemTask"
+              DTS:DelayValidation="True"
+              DTS:Description="File System Task"
+              DTS:DTSID="{B55B3E0E-09D5-401F-88B2-57FF0281B531}"
+              DTS:ExecutableType="Microsoft.FileSystemTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Move Proccessed Files"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <FileSystemData
+                  TaskSourcePath="User::medFilePath"
+                  TaskIsSourceVariable="True"
+                  TaskDestinationPath="Achive" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Load Generic Medication File\Loop Through Files.PrecedenceConstraints[Constraint]"
+              DTS:CreationName=""
+              DTS:DTSID="{8F14DAC1-24ED-4E64-93EF-34480A4A84FC}"
+              DTS:From="Package\Load Generic Medication File\Loop Through Files\Load Data"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint"
+              DTS:To="Package\Load Generic Medication File\Loop Through Files\Execute SP to Load Base Table" />
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Load Generic Medication File\Loop Through Files.PrecedenceConstraints[Constraint 1]"
+              DTS:CreationName=""
+              DTS:DTSID="{C3881D2E-BE5D-46F8-9F15-EB320E681AA5}"
+              DTS:From="Package\Load Generic Medication File\Loop Through Files\Execute SP to Load Base Table"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint 1"
+              DTS:To="Package\Load Generic Medication File\Loop Through Files\Move Proccessed Files" />
+          </DTS:PrecedenceConstraints>
+          <DTS:ForEachVariableMappings>
+            <DTS:ForEachVariableMapping
+              DTS:CreationName=""
+              DTS:DTSID="{903BD8DF-D423-4954-A89B-2C1892B9AC9E}"
+              DTS:ObjectName="{903BD8DF-D423-4954-A89B-2C1892B9AC9E}"
+              DTS:ValueIndex="0"
+              DTS:VariableName="User::medFilePath" />
+          </DTS:ForEachVariableMappings>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Load Generic Medication File\Truncate Stage"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{C7C30BAF-AA05-4EF0-9FEA-C144D3ACAA22}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate Stage"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{4CC908E8-0475-4F25-9C75-C0DD5527B6A7}"
+              SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.generic_medication_names_stg" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Load Generic Medication File.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{96A79F6A-17D2-4653-9C1E-D3B1BB4876E3}"
+          DTS:From="Package\Load Generic Medication File\Truncate Stage"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Load Generic Medication File\Loop Through Files" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Load Generic Medication File\Loop Through Files\Load Data"
+          TopLeft="31,23" />
+        <NodeLayout
+          Size="224,42"
+          Id="Package\Load Generic Medication File\Loop Through Files\Execute SP to Load Base Table"
+          TopLeft="28,133" />
+        <EdgeLayout
+          Id="Package\Load Generic Medication File\Loop Through Files.PrecedenceConstraints[Constraint]"
+          TopLeft="94.5,65">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="45.5,68"
+              Start="0,0"
+              End="45.5,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30"
+                    Point2="0,34"
+                    Point3="4,34" />
+                  <mssgle:LineSegment
+                    End="41.5,34" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41.5,34"
+                    Point2="45.5,34"
+                    Point3="45.5,38" />
+                  <mssgle:LineSegment
+                    End="45.5,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="183,42"
+          Id="Package\Load Generic Medication File\Loop Through Files\Move Proccessed Files"
+          TopLeft="31,241" />
+        <EdgeLayout
+          Id="Package\Load Generic Medication File\Loop Through Files.PrecedenceConstraints[Constraint 1]"
+          TopLeft="140,175">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-17.5,66"
+              Start="0,0"
+              End="-17.5,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29"
+                    Point2="0,33"
+                    Point3="-4,33" />
+                  <mssgle:LineSegment
+                    End="-13.5,33" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.5,33"
+                    Point2="-17.5,33"
+                    Point3="-17.5,37" />
+                  <mssgle:LineSegment
+                    End="-17.5,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="257,338"
+          Size="257,381"
+          Id="Package\Load Generic Medication File\Loop Through Files"
+          TopLeft="136,121.5" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Load Generic Medication File\Truncate Stage"
+          TopLeft="179,17" />
+        <EdgeLayout
+          Id="Package\Load Generic Medication File.PrecedenceConstraints[Constraint]"
+          TopLeft="254.5,59">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10,62.5"
+              Start="0,0"
+              End="10,55">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.25"
+                    Point2="0,31.25"
+                    Point3="4,31.25" />
+                  <mssgle:LineSegment
+                    End="6,31.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6,31.25"
+                    Point2="10,31.25"
+                    Point3="10,35.25" />
+                  <mssgle:LineSegment
+                    End="10,55" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="559,553"
+          Size="559,596"
+          Id="Package\Load Generic Medication File"
+          TopLeft="194,151" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load Generic Medication File\Loop Through Files\Load Data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="229,42"
+          Id="Package\Load Generic Medication File\Loop Through Files\Load Data\Src - Generic Medication Names"
+          TopLeft="354,95" />
+        <NodeLayout
+          Size="230,42"
+          Id="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names"
+          TopLeft="340,400" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Load Generic Medication File\Loop Through Files\Load Data\Data Conversion"
+          TopLeft="584,205" />
+        <EdgeLayout
+          Id="Package\Load Generic Medication File\Loop Through Files\Load Data.Paths[Flat File Source Output]"
+          TopLeft="468.5,137">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="193.5,68"
+              Start="0,0"
+              End="193.5,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30"
+                    Point2="0,34"
+                    Point3="4,34" />
+                  <mssgle:LineSegment
+                    End="189.5,34" />
+                  <mssgle:CubicBezierSegment
+                    Point1="189.5,34"
+                    Point2="193.5,34"
+                    Point3="193.5,38" />
+                  <mssgle:LineSegment
+                    End="193.5,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Load Generic Medication File\Loop Through Files\Load Data\Derived Column"
+          TopLeft="385,299" />
+        <EdgeLayout
+          Id="Package\Load Generic Medication File\Loop Through Files\Load Data.Paths[Data Conversion Output]"
+          TopLeft="662,247">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-200,52"
+              Start="0,0"
+              End="-200,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22"
+                    Point2="0,26"
+                    Point3="-4,26" />
+                  <mssgle:LineSegment
+                    End="-196,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-196,26"
+                    Point2="-200,26"
+                    Point3="-200,30" />
+                  <mssgle:LineSegment
+                    End="-200,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Generic Medication File\Loop Through Files\Load Data.Paths[Derived Column Output]"
+          TopLeft="458.5,341">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59"
+              Start="0,0"
+              End="0,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Generic Medication File\Loop Through Files\Load Data\Stg - Generic Medication Names">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
