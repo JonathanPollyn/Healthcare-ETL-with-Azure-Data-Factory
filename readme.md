@@ -24,7 +24,7 @@ Healthcare organizations frequently need help managing vast quantities of data f
 ## Features
 
 - **Hybrid ETL Solutions:** Integrated data workflows using Azure Data Factory and SSIS for cloud and on-premise environments.
-- **Data Ingestion:** Pipelines to ingest data from various healthcare data sources, including EHR systems, HL7 feeds, medical devices, and on-premise databases.
+- **Data Ingestion:** Pipelines to ingest data from various healthcare data sources and on-premise databases.
 - **Data Transformation:** Scripts and activities for cleaning, transforming, and standardizing healthcare data in the cloud and on-premise.
 - **Data Integration:** End-to-end solutions that integrate data across multiple healthcare systems, ensuring consistency and accuracy.
 - **Security and Compliance:** Best practices for handling sensitive healthcare data, including encryption, data masking, and HIPAA compliance.
